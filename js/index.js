@@ -38,6 +38,21 @@ function toggleImageZoom(event) {
     }
 }
 
+function mobileMenu (event) {
+    // let humMenu = document.getElementsByClassid("humicon");
+    let mobile_navbar = document.getElementsByClassName("mobile_navbar");
+    if (mobile_navbar){
+        if(mobile_navbar){
+            if(!mobile_navbar.classList.contains("d-none")){
+                mobile_navbar.classList.add("d-none");
+            }else
+                if(event){
+                    mobile_navbar.classList.remove("d-none");
+                }
+        }
+    }
+}
+
 // let notebook= prompt("enter the names");
 // if (notebook.includes("finish", 0)){
 //     console.log(notebook);
