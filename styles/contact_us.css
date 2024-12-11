@@ -1,0 +1,120 @@
+main {
+    margin: 30px auto 30px auto;
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main > h1 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #8B0861;
+}
+
+main > span {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+main > .form {
+    width: 90%;
+    display: flex;
+    margin-top: 30px;
+    padding: 30px;
+    column-gap: 10px;
+    border-radius: 15px;
+    border: 1px solid #efbadf;
+    box-shadow: 0 5px 20px #efbadf;
+
+}
+
+main > .form > .input {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 60%;
+}
+
+main > .form > .input > .input-row {
+    display: flex;
+    column-gap: 10px;
+    width: 100%;
+}
+
+main > .form > .input > .input-row > .input-col {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 45%;
+}
+
+main > .form > .input > .input-row > .input-col > input , main > .form > .input > .input-row > .input-col > select {
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: 1px solid #e3dde1;
+    background-color: #f7f0f5;
+}
+
+main > .form > .input > .input-row > .input-col > select {
+    cursor: pointer;
+}
+
+main > .form > .input > .message {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding-left: 30px;
+}
+
+main > .form > .input > .message > textarea {
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: 1px solid #e3dde1;
+    background-color: #f7f0f5;
+    height: 80px;
+    max-width: 100%;
+}
+
+main > .form > .input > button {
+    align-self: center;
+    padding: 10px 30px;
+    background-color: #8b0861;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+main > .form > .info {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    row-gap: 15px;
+}
+
+main > .form > .info > .info-row {
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+}
+
+main > .form > .info > .info-row > .titr > i {
+    color: #8B0861;
+}
+
+main > .form > .info > .info-row > span , main > .form > .info > .info-row > .titr > span {
+    font-weight: 300;
+    font-size: 15px;
+}
+
+main > .form > .info > .info-row > span {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+main > .form > .info > .separator {
+    width: 100%;
+    border-color: rgba(139, 8, 97, 0.2)
+}
+

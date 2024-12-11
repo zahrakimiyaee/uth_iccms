@@ -1,0 +1,119 @@
+body > .container {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    align-items: start;
+    column-gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+body > .container > .img_desc {
+    display: flex;
+    column-gap: 50px;
+}
+
+body > .container > .img_desc > img {
+    object-fit: scale-down;
+    border-radius: 15px;
+}
+
+body > .container > .img_desc > .description > .icons {
+    display: flex;
+    column-gap: 20px;
+}
+
+body > .container > .img_desc > .description > .icons > li > i{
+    font-size: 20px;
+    color: #726E6E;
+    cursor: pointer;
+}
+
+body > .container > .img_desc > .description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+body > .container > .img_desc > .description > .title {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+body > .container > .img_desc > .description > .title > h1 {
+    font-size: 20px;
+    color: #8b0861;
+}
+
+body > .container > .img_desc > .description > .title > span {
+    color: #726E6E;
+    font-size: 15px;
+}
+
+body > .container > .img_desc > .description > .date {
+    padding: 10px;
+    background-color: #f7f0f5;
+    border-radius: 10px;
+}
+
+body > .container > .img_desc > .description > .master {
+    padding-right: 10px;
+}
+
+body > .container > .img_desc > .description > .master > span:last-of-type {
+    margin-top: 10px;
+    color: #726E6E;
+    font-size: 13px;
+    display: block;
+}
+
+body > .container > .buy {
+    position: sticky;
+    top: 0px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 30px;
+    border: 1px solid rgb(190, 189, 189);
+    box-shadow: 1px 1px 2px rgb(190, 189, 189) ;
+    border-radius: 10px;
+}
+
+body > .container > .buy > .price {
+    display: flex;
+    justify-content: space-between;
+}
+
+body > .container > .buy > button {
+    padding: 10px 20px;
+    background-color: #8b0861;
+    color: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+body > .details {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+body > .details > .separator {
+    width: 100%;
+}
+
+body > .details > .separator > span {
+    color: #343232;
+    margin-right: 10px  ;
+}
+
+body > .details > .text {
+    padding: 15px;
+}
+
+body > .details > .text > p {
+    font-size: 14px;
+    color: #726E6E;
+}

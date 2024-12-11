@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset_css.css"/>
+    <link rel="stylesheet" href="./styles/globals.css"/>
+    <link rel="stylesheet" href="./styles/zoom.css"/>
+    <link rel="stylesheet" href="./styles/index.css"/>
+    <link rel="stylesheet" href="./styles/header.css"/>
+    <link rel="stylesheet" href="./styles/footer.css"/>
+    <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.css">
+    <link rel="icon" href="./assets/images/uni-logo.png"/>
+    <title>LMS</title>
+</head>
+<body>
+    <!------ header ------>
+    <header class="header">
+        <img  class="logo" src="./assets/images/logo_white.png" />
+        <h1 class="name">
+            سامانه مدیریت دوره‌های آموزشی 
+            <br/>
+            مرکز نوآفرینی و کارآفرینی دانشگاه تربت‌حیدریه
+        </h1>
+        <nav class="navbar">
+            <ul>
+                <li> 
+                    <a href="./index.html">صفحه اصلی</a>
+                </li>
+                <li> 
+                    <a href="#">اطلاعیه‌ها</a>
+                </li>
+                <li> 
+                    <a href="https://www.torbath.ac.ir/" target="_blank">دانشگاه تربت‌حیدریه</a>
+                </li>
+                <li> 
+                    <a href="./about_us.html">درباره ما</a>
+                </li>
+                <li> 
+                    <a href="./contact_us.html">تماس باما</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="./auth.html">ثبت نام / ورود</a>
+    </header>
+    <!------ main ------>
+    <main>  
+        <div class="titr1">
+            <h3>دوره های درحال  برگذاری</h3>
+            <button>مشاهده همه</button>
+        </div>
+        <div class="galery1">
+            <div class="product" >
+                <div class="takhfif">
+                        <span>10%-</span>
+                </div>
+                <img src="./assets/images/photo_1_2024-12-09_11-04-24.jpg" width="200" height="200" onclick="toggleImageZoom(event)" >
+                <div class="description">
+                    <h4>کسب درآمد با کسب مهارت در استفاده از ابزارهای دیجیتال و هوش‌ مصنوعی </h4>
+                    <div class="desc">
+                        <h4>مدرس:</h4>
+                        <h5>مهندس رامین آذریان</h5>
+                    </div>
+                    <div class="desc">
+                        <h4>محل برگذاری:</h4>
+                        <h5>مرکز نوآفرینی و کارآفرینی دانشگاه تربت حیدریه</h5>
+                    </div>
+                    <a href="./product.html">توضیحات بیشتر</a>
+                </div>
+                <div class="register">
+                    <div>
+                        <span class="line-through">
+                            <strong>
+                                200,000 
+                            </strong>
+                            <small>تومان</small>
+                        </span>
+                        <span>
+                            <strong>
+                                180,000 
+                            </strong>
+                            <small>تومان</small>
+                        </span>
+                    </div>
+                    <button>ثبت نام</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="./assets/images/product2.png" width="200" height="200">
+                <div class="description">
+                    <h4>آموزش برنامه نویسی تحت‌وب</h4>
+                    <div class="certificate">
+                        <i class="fa-regular fa-file-certificate"></i>
+                        <span>دارای گواهی فنی‌حرفه‌ای</span>
+                    </div>
+                    <div class="desc">
+                        <h4>مدرس:</h4>
+                        <h5>مهندس مجید کوهجانی</h5>
+                    </div>
+                    <div class="desc">
+                        <h4>محل برگذاری:</h4>
+                        <h5>مرکز نوآفرینی و کارآفرینی دانشگاه تربت حیدریه</h5>
+                    </div>
+                    <button>توضیحات بیشتر</button>
+                </div>
+                <div class="register">
+                    <div>
+                        <span>
+                            <strong>
+                                200,000 
+                            </strong>
+                            <small>تومان</small>
+                        </span>
+                    </div>
+                    <button>ثبت نام</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="takhfif">
+                    <span>20%-</span>
+            </div>
+                <img src="./assets/images/photo_3_2024-12-09_11-04-24.jpg" width="200" height="200">
+                <div class="description">
+                    <h4>آموزش تکنسین احیا مرتع</h4>
+                    <div class="certificate">
+                        <i class="fa-regular fa-file-certificate"></i>
+                        <span>دارای گواهی فنی‌حرفه‌ای</span>
+                    </div>
+                    <div class="desc">
+                        <h4>مدرس:</h4>
+                        <h5>دکتر فرزادمهر</h5>
+                    </div>
+                    <div class="desc">
+                        <h4>محل برگذاری:</h4>
+                        <h5>مرکز نوآفرینی و کارآفرینی دانشگاه تربت حیدریه</h5>
+                    </div>
+                    <button>توضیحات بیشتر</button>
+                </div>
+                <div class="register">
+                    <div>
+                        <span class="line-through">
+                            <strong>
+                                200,000 
+                            </strong>
+                            <small>تومان</small>
+                        </span>
+                        <span>
+                            <strong>
+                                160,000 
+                            </strong>
+                            <small>تومان</small>
+                        </span>
+                    </div>
+                    <button>ثبت نام</button>
+                </div>
+
+            </div>
+            <div class="product">
+                <img src="./assets/images/photo_8_2024-12-09_11-04-24.jpg" width="200" height="200">
+                <div class="description">
+                    <h4>سفر به دنیای تجارت</h4>
+                    <div class="certificate">
+                        <i class="fa-regular fa-file-certificate"></i>
+                        <span>دارای گواهی فنی‌حرفه‌ای</span>
+                    </div>
+                    <div class="desc">
+                        <h4>مدرس:</h4>
+                        <h5>دکتر محتشمی و مهندس حسین‌زاده</h5>
+                    </div>
+                    <div class="desc">
+                        <h4>محل برگذاری:</h4>
+                        <h5>مرکز نوآفرینی و کارآفرینی دانشگاه تربت حیدریه</h5>
+                    </div>
+                    <button>توضیحات بیشتر</button>
+                </div>
+                <div class="register">
+                    <div>
+                        <span>
+                            <strong>
+                                200,000 
+                            </strong>
+                            <small>تومان</small>
+                        </span>
+                    </div>
+                    <button>ثبت نام</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="./assets/images/photo_4_2024-12-09_11-04-24.jpg" width="200" height="200">
+                <div class="description">
+                    <h4>آموزش حسابداری</h4>
+                    <div class="certificate">
+                        <i class="fa-regular fa-file-certificate"></i>
+                        <span>دارای گواهی فنی‌حرفه‌ای</span>
+                    </div>
+                    <div class="desc">
+                        <h4>مدرس:</h4>
+                        <h5>دکتر رستگاری‌پور</h5>
+                    </div>
+                    <div class="desc">
+                        <h4>محل برگذاری:</h4>
+                        <h5>مرکز نوآفرینی و کارآفرینی دانشگاه تربت حیدریه</h5>
+                    </div>
+                    <button>توضیحات بیشتر</button>
+                </div>
+                <div class="register">
+                    <div>
+                        <span>
+                            <strong>
+                                200,000 
+                            </strong>
+                            <small>تومان</small>
+                        </span>
+                    </div>
+                    <button>ثبت نام</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="./assets/images/photo_5_2024-12-09_11-04-24.jpg" width="200" height="200">
+                <div class="description">
+                    <h4>آموزش اقتصادسنجی کاربردی</h4>
+                    <div class="certificate">
+                        <i class="fa-regular fa-file-certificate"></i>
+                        <span>دارای گواهی فنی‌حرفه‌ای</span>
+                    </div>
+                    <div class="desc">
+                        <h4>مدرس:</h4>
+                        <h5>دکتر تکتم محتشمی</h5>
+                    </div>
+                    <div class="desc">
+                        <h4>محل برگذاری:</h4>
+                        <h5>مرکز نوآفرینی و کارآفرینی دانشگاه تربت حیدریه</h5>
+                    </div>
+                    <button>توضیحات بیشتر</button>
+                </div>
+                <div class="register">
+                    <div>
+                        <span>
+                            <strong>
+                                200,000 
+                            </strong>
+                            <small>تومان</small>
+                        </span>
+                    </div>
+                    <button>ثبت نام</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="./assets/images/photo_6_2024-12-09_11-04-24.jpg" width="200" height="200">
+                <div class="description">
+                    <h4>آموزش کاربردی پرورش‌دهنده قارچ خوراکی</h4>
+                    <div class="desc">
+                        <h4>مدرس:</h4>
+                        <h5>دکتر محبوبه ناصری و مهندس علی میرزایی</h5>
+                    </div>
+                    <div class="desc">
+                        <h4>محل برگذاری:</h4>
+                        <h5>مرکز نوآفرینی و کارآفرینی دانشگاه تربت حیدریه</h5>
+                    </div>
+                    <button>توضیحات بیشتر</button>
+                </div>
+                <div class="register">
+                    <div>
+                        <span>
+                            <strong>
+                                200,000 
+                            </strong>
+                            <small>تومان</small>
+                        </span>
+                    </div>
+                    <button>ثبت نام</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="./assets/images/photo_7_2024-12-09_11-04-24.jpg" width="200" height="200">
+                <div class="description">
+                    <h4>آموزش سرپرست برنامه‌ریزی و کنترل تولید</h4>
+                    <div class="desc">
+                        <h4>مدرس:</h4>
+                        <h5>دکتر سیبویه</h5>
+                    </div>
+                    <div class="desc">
+                        <h4>محل برگذاری:</h4>
+                        <h5>مرکز نوآفرینی و کارآفرینی دانشگاه تربت حیدریه</h5>
+                    </div>
+                    <button>توضیحات بیشتر</button>
+                </div>
+                <div class="register">
+                    <div>
+                        <span>
+                            <strong>
+                                200,000 
+                            </strong>
+                            <small>تومان</small>
+                        </span>
+                    </div>
+                    <button>ثبت نام</button>
+                </div>
+            </div>
+        </div>
+        <div class="image-zoom d-none" id="imageZoom">
+            <div class="image-zoom__backdrop"></div>
+            <div class="image-zoom__content">
+                <button class="zoom__close-btn" onclick="toggleImageZoom()">
+                    <i class="fa-regular fa-xmark"></i>
+                </button>
+                <img src="./assets/images/product.png" alt="Image 1" class="zoomed-image" />
+            </div>
+        </div>
+    </main>
+    <!------ footer  ------>
+    <footer class="footer">
+        <div class="top_footer">
+            <div class="first_menu">
+                <label>دوره‌های اخیر</label>
+                <nav class="footer_navbar">
+                    <ul>
+                        <li>
+                            <a href="#">برنامه‌نویسی تحت‌وب</a>
+                        </li>
+                        <li>
+                            <a href="#">آموزش حسابداری</a>
+                        </li>
+                        <li>
+                            <a href="#">آموزش اقتصادسنجی کاربردی</a>
+                        </li>
+                        <li>
+                            <a href="#">سفر به دنیای تجارت</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>  
+            <div class="second_menu">
+                <label>دسترسی سریع</label>
+                <nav class="footer_navbar">
+                    <ul>
+                        <li>
+                            <a href="./index.html">صفحه اصلی</a>
+                        </li>
+                        <li>
+                            <a href="#">اطلاعیه‌ها</a>
+                        </li>
+                        <li>
+                            <a href="https://www.torbath.ac.ir/" target="_blank">دانشگاه تربت‌حیدریه</a>
+                        </li>
+                        <li>
+                            <a href="./about_us.html">درباره ما</a>
+                        </li>
+                        <li>
+                            <a href="./contact_us.html">تماس باما</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>  
+            <div class="about">
+                <label>دانشگاه تربت‌حیدریه</label> <br/>
+                <p>
+                    در سال 1385 تاسیس شده است. در حال حاضر 1999 دانشجو و 38 استاد در این مرکز مشغول فعالیت می باشند.<br/>بر اساس تحلیلهای انجام شده این مرکز تاکنون 1062 مقاله علمی در نشریات و همایشهای داخلی منتشر نموده است.<br/>دانشگاه تربت حیدریه صاحب امتیاز و ناشر 2 مجله تخصصی است و تا کنون 27 همایش توسط دانشگاه تربت حیدریه <br/> برگزار شده است.علاوه بر این تاکنون 74 مقاله معتبر بین المللی نیز از این مرکز استخراج شده است. 
+                </p>
+            </div>    
+        </div>  
+        <div class="bottom_footer">
+            <div class="copyright">
+                <p>کلیه حقوق این وب‌سایت متعلق به دانشگاه تربت‌حیدریه میباشد.</p>
+            </div>
+        </div>        
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+</html>

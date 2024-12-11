@@ -1,0 +1,64 @@
+main {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+main > h1 {
+    font-weight: 300;
+    font-size: 25px;
+    color: #8b0861;
+}
+
+main > .main-description {
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e3dde1;
+    background-color: #f7f0f5;
+}
+
+main > .main-description > p {
+    text-align: justify;
+}
+
+main > .description {
+    padding: 25px;
+    width: 100%;
+    display: flex;
+    column-gap: 10px;
+}
+
+main > .description > .name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+}
+
+main > .description > .name > i {
+    color: #8b0861;
+}
+
+main > .description > .name > span {
+    display: block; 
+}
+
+main > .description > .text {
+    width: 70vw;
+    text-align: justify;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+main > .separator {
+    width: 100%;
+    border-color: rgba(139, 8, 97, 0.2)
+}

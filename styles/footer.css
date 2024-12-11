@@ -1,0 +1,57 @@
+.footer > .top_footer {
+    display: flex;
+    justify-content: center;
+    column-gap: 200px;
+    padding: 30px 0 30px;
+    background-color: #343536; 
+}
+
+.top_footer > .first_menu , .top_footer > .second_menu , .top_footer> .about {
+    line-height: 30px;
+}
+
+.top_footer > .first_menu > .footer_navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.top_footer > .first_menu > label , .top_footer > .second_menu > label , .top_footer > .about > label{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.top_footer > .first_menu >.footer_navbar > ul >li > a ,.top_footer > .second_menu > .footer_navbar > ul > li > a , .top_footer > .about > p {
+    color: #C1C8CE;
+}
+
+.top_footer > .about {
+    color: #ffffff;
+}
+
+.footer > .bottom_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 40px;
+  background-color: #343536;
+}
+
+.footer > .bottom_footer > .icons > .icon_list{
+    display: flex;
+    justify-items: center;
+    column-gap: 10px;
+}
+
+.footer > .top_footer > .about > p{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+.footer > .bottom_footer > .copyright {
+    font-size: 12px;
+}
+
+.footer > .bottom_footer > .icons > .icon_list > ul > li > i , .footer > .bottom_footer > .copyright > p{
+    color: #C1C8CE;
+}
