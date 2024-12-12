@@ -15,18 +15,10 @@
     .header > .navbar {
         display: none;
     }
-
-    .header > a{
-        margin-right: 10px !important;
-    }
-
+    
     .header > #humicon {
         display: flex !important ;
     }  
-    
-    .header > .mobile_navbar {
-        display: block !important;
-    }
 }
 
 .header > .logo {
@@ -37,7 +29,6 @@
     width: auto;
     height: auto;
     aspect-ratio: 3/3;
-
 }
 
 .header > .name {
@@ -62,14 +53,8 @@
 
 .header > #humicon {
     display: none;
-    margin-right: auto;
     font-size: 40px;
     color: #ffffff;
-}
-
-.header > .mobile_navbar {
-    display: none;
-
 }
 
 .header > a {

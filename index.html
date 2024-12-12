@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./styles/reset_css.css"/>
     <link rel="stylesheet" href="./styles/globals.css"/>
     <link rel="stylesheet" href="./styles/zoom.css"/>
+    <link rel="stylesheet" href="./styles/mobile_menu.css"/>
     <link rel="stylesheet" href="./styles/index.css"/>
     <link rel="stylesheet" href="./styles/header.css"/>
     <link rel="stylesheet" href="./styles/footer.css"/>
@@ -16,33 +17,42 @@
 <body>
     <!------ header ------>
     <header class="header">
+        <i class="fa-solid fa-bars" id="humicon" onclick="mobileMenu(click)"></i>
+        <div class="mobile_menu_div d-none" id="mobile">
+            <div class="mobile_menu_backdrop_div" onclick="mobileMenu(click)"></div>
+            <div class="mobile_menu_content_div">
+                <nav aria-label="mobile_menu" class="mobile_menu">
+                    <ul>
+                        <li> 
+                            <a href="./index.html">صفحه اصلی</a>
+                        </li>
+                        <hr/>
+                        <li> 
+                            <a href="#">اطلاعیه‌ها</a>
+                        </li>
+                        <hr>
+                        <li> 
+                            <a href="https://www.torbath.ac.ir/" target="_blank">دانشگاه تربت‌حیدریه</a>
+                        </li>
+                        <hr>
+                        <li> 
+                            <a href="./about_us.html">درباره ما</a>
+                        </li>
+                        <hr>
+                        <li> 
+                            <a href="./contact_us.html">تماس باما</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
         <img  class="logo" src="./assets/images/logo_white.png" />
         <h1 class="name">
             سامانه مدیریت دوره‌های آموزشی 
             <br/>
             مرکز نوآفرینی و کارآفرینی دانشگاه تربت‌حیدریه
         </h1>
-        <nav class="navbar">
-            <ul>
-                <li> 
-                    <a href="./index.html">صفحه اصلی</a>
-                </li>
-                <li> 
-                    <a href="#">اطلاعیه‌ها</a>
-                </li>
-                <li> 
-                    <a href="https://www.torbath.ac.ir/" target="_blank">دانشگاه تربت‌حیدریه</a>
-                </li>
-                <li> 
-                    <a href="./about_us.html">درباره ما</a>
-                </li>
-                <li> 
-                    <a href="./contact_us.html">تماس باما</a>
-                </li>
-            </ul>
-        </nav>
-        <i class="fa-solid fa-bars" id="humicon" onclick="mobileMenu(event)"></i>
-        <nav class="mobile_navbar">
+        <nav aria-label="menu" class="navbar">
             <ul>
                 <li> 
                     <a href="./index.html">صفحه اصلی</a>

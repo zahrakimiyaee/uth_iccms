@@ -38,17 +38,17 @@ function toggleImageZoom(event) {
     }
 }
 
-function mobileMenu (event) {
-    // let humMenu = document.getElementsByClassid("humicon");
-    let mobile_navbar = document.getElementsByClassName("mobile_navbar");
-    if (mobile_navbar){
-        if(mobile_navbar){
-            if(!mobile_navbar.classList.contains("d-none")){
-                mobile_navbar.classList.add("d-none");
-            }else
-                if(event){
-                    mobile_navbar.classList.remove("d-none");
-                }
+function mobileMenu (click) {
+    let mobile_menu = document.getElementById("mobile");
+    if (mobile_menu){
+        if(mobile_menu){
+            if(!mobile_menu.classList.contains("d-none")){
+                mobile_menu.classList.add("d-none");
+            } else{
+                if(click){
+                    mobile_menu.classList.remove("d-none");
+                } 
+            }
         }
     }
 }

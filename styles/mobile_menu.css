@@ -1,0 +1,36 @@
+.mobile_menu_div {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    right: 0px;
+}
+
+.mobile_menu_div > .mobile_menu_backdrop_div{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.685);
+}
+
+.mobile_menu_div > .mobile_menu_content_div{
+    position: relative;
+    display: flex;
+    width: fit-content;
+    padding: 20px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.99)
+}
+
+.mobile_menu_div > .mobile_menu_content_div > .mobile_menu > ul {
+    line-height: 30px;
+}
+
+.mobile_menu_div > .mobile_menu_content_div > .mobile_menu > ul > li > a {
+    color: #8B0861;
+}
+
+.mobile_menu_div > .mobile_menu_content_div > .mobile_menu > ul > hr {
+    border-color: rgba(139, 8, 97, 0.2)
+
+}
