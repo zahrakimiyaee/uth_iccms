@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/reset_css.css">
+    <link rel="stylesheet" href="./styles/globals.css"/>
+    <link rel="stylesheet" href="./styles/mobile_menu.css"/>
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/about-us.css">
@@ -14,13 +16,42 @@
 <body>
     <!-- start header -->
     <header class="header">
+        <i class="fa-solid fa-bars" id="humicon" onclick="mobileMenu(click)"></i>
+        <div class="mobile_menu_div d-none" id="mobile">
+            <div class="mobile_menu_backdrop_div" onclick="mobileMenu(click)"></div>
+            <div class="mobile_menu_content_div">
+                <div class="title">
+                    <i class="fa-regular fa-arrow-right" onclick="mobileMenu(click)"></i>
+                    <strong >مرکز نوآفرینی و کارآفرینی </strong>
+                </div>
+                <nav aria-label="mobile_menu" class="mobile_menu">
+                    <ul>
+                        <li> 
+                            <a href="./index.html">صفحه اصلی</a>
+                        </li>
+                        <li> 
+                            <a href="#">اطلاعیه‌ها</a>
+                        </li>
+                        <li> 
+                            <a href="https://www.torbath.ac.ir/" target="_blank">دانشگاه تربت‌حیدریه</a>
+                        </li>
+                        <li> 
+                            <a href="./about_us.html">درباره ما</a>
+                        </li>
+                        <li> 
+                            <a href="./contact_us.html">تماس باما</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
         <img  class="logo" src="./assets/images/logo_white.png" />
         <h1 class="name">
             سامانه مدیریت دوره‌های آموزشی 
             <br/>
             مرکز نوآفرینی و کارآفرینی دانشگاه تربت‌حیدریه
         </h1>
-        <nav class="navbar">
+        <nav aria-label="menu" class="navbar">
             <ul>
                 <li> 
                     <a href="./index.html">صفحه اصلی</a>
@@ -39,7 +70,10 @@
                 </li>
             </ul>
         </nav>
-        <a href="./auth.html">ثبت نام / ورود</a>
+        <a class="login" href="./auth.html">
+            <i class="fa-light fa-user"></i>
+            <span>ثبت نام / ورود</span>
+        </a>
     </header>
     <!-- end header -->  
     <!-- start body --> 
@@ -137,16 +171,18 @@
             <div class="about">
                 <label>دانشگاه تربت‌حیدریه</label> <br/>
                 <p>
-                    در سال 1385 تاسیس شده است. در حال حاضر 1999 دانشجو و 38 استاد در این مرکز مشغول فعالیت می باشند.<br/>بر اساس تحلیلهای انجام شده این مرکز تاکنون 1062 مقاله علمی در نشریات و همایشهای داخلی منتشر نموده است.<br/>دانشگاه تربت حیدریه صاحب امتیاز و ناشر 2 مجله تخصصی است و تا کنون 27 همایش توسط دانشگاه تربت حیدریه <br/> برگزار شده است.علاوه بر این تاکنون 74 مقاله معتبر بین المللی نیز از این مرکز استخراج شده است. 
+                    در سال 1385 تاسیس شده است. در حال حاضر 1999 دانشجو و 38 استاد در این مرکز مشغول فعالیت می باشند.بر اساس تحلیلهای انجام شده این مرکز تاکنون 1062 مقاله علمی در نشریات و همایشهای داخلی منتشر نموده است.دانشگاه تربت حیدریه صاحب امتیاز و ناشر 2 مجله تخصصی است و تا کنون 27 همایش توسط دانشگاه تربت حیدریه  برگزار شده است.علاوه بر این تاکنون 74 مقاله معتبر بین المللی نیز از این مرکز استخراج شده است. 
                 </p>
             </div>    
         </div>  
         <div class="bottom_footer">
+            <hr/>
             <div class="copyright">
                 <p>کلیه حقوق این وب‌سایت متعلق به دانشگاه تربت‌حیدریه میباشد.</p>
             </div>
         </div>        
     </footer>
     <!-- end footer -->
+    <script src="./js/header.js"></script>
 </body>
 </html>

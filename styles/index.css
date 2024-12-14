@@ -56,10 +56,6 @@ main > .galery1 > .product {
     row-gap: 15px;
 }
 
-/* main > .galery1 > .product:last-of-type{
-    margin-left: auto;
-} */
-
 main > .galery1 > .product:hover {
     box-shadow: 1px 1px 15px #726E6E;
     transition: all 0.5s;
@@ -88,7 +84,6 @@ main > .galery1 > .product > .description > .certificate > i {
 
 main > .galery1 > .product > .description > .certificate > span {
     color: #FFC107;
-    /* color: #B0BEC5; */
     font-size: 13px;
 }
 

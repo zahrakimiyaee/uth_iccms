@@ -16,21 +16,33 @@
 .mobile_menu_div > .mobile_menu_content_div{
     position: relative;
     display: flex;
-    width: fit-content;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 75%;
     padding: 20px;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.99)
 }
 
+.mobile_menu_div > .mobile_menu_content_div > .title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 15px;
+}
+
 .mobile_menu_div > .mobile_menu_content_div > .mobile_menu > ul {
-    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.mobile_menu_div > .mobile_menu_content_div > .mobile_menu > ul > li {
+    border: 1px solid rgba(139, 8, 97, 0.2);
+    border-radius: 8px;
+    padding: 12px;
 }
 
 .mobile_menu_div > .mobile_menu_content_div > .mobile_menu > ul > li > a {
     color: #8B0861;
-}
-
-.mobile_menu_div > .mobile_menu_content_div > .mobile_menu > ul > hr {
-    border-color: rgba(139, 8, 97, 0.2)
-
 }
