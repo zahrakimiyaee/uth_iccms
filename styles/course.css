@@ -11,6 +11,13 @@ main > .selector {
     min-height: 35px;
     border: 1px solid #8B0861;
     border-radius: 8px 8px 0 0;
+    cursor: pointer;
+}
+
+main > .selector > .master:hover {
+    transition: 0.5s;
+    border: 1px solid #8B0861;
+    font-size: 18px;
 }
 
 main > .selector > .master { 
@@ -33,56 +40,9 @@ main > .selector > .student {
     background-color: #F7F0F5;
 }
 
-main > .master-class {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 30px;
-    row-gap: 20px;
-    border-radius: 0 0 8px 8px;
-    border: 1px solid #efbadf;
-    box-shadow: 0 5px 20px #efbadf;
+main > .selector > .student:hover {
+    transition: 0.5s;
+    border: 1px solid #8B0861;
+    font-size: 18px;
 }
 
-main > .master-class > .course-name__date {
-    display: flex;
-    column-gap: 30px;
-    /* justify-content: space-around; */
-}
-
-main > .master-class .input {
-    padding: 10px 10px;
-    border-radius: 8px;
-    border: 1px solid #e3dde1;
-    background-color: #f7f0f5;
-}
-
-main > .master-class > .order {
-    display: flex;
-    column-gap: 10px;
-}
-
-main > .master-class > .order > .course-master__write-more{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    /* align-items: flex-start; */
-}
-
-main > .master-class > .order > .course-master__write-more > .write-more {
-    display: flex;
-    width: 80%;
-    flex-direction: column;
-}
-
-main > .master-class > .order > .course-master__write-more > .write-more > textarea {
-    min-width: 100%;
-    min-height: 100px;
-}
-
-main > .master-class > .order > .course-degree {
-    display: flex;
-    width: 50%;
-    column-gap: 20px;
-}
