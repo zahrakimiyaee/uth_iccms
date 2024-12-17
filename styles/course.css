@@ -6,6 +6,7 @@ main {
 }
 
 main > .selector {
+    position: relative;
     display: flex;
     width: 100%;
     min-height: 35px;

@@ -1,5 +1,14 @@
+main > .selector > .student-select{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    border-radius:  inherit;
+    color: #ffffff;
+    background-color: #8B0861;
+}
+
 main > .student-class {
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     width: 100%;

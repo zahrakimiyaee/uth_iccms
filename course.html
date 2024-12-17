@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="./styles/reset_css.css"/>
     <link rel="stylesheet" href="./styles/globals.css"/>
     <link rel="stylesheet" href="./styles/mobile_menu.css"/>
-    <link rel="stylesheet" href="./styles/course.css"/>
     <link rel="stylesheet" href="./styles/master_course.css"/>
     <link rel="stylesheet" href="./styles/student_course.css"/>
+    <link rel="stylesheet" href="./styles/course.css"/>
     <link rel="stylesheet" href="./styles/header.css"/>
     <link rel="stylesheet" href="./styles/footer.css"/>
     <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.css">
@@ -79,15 +79,15 @@
     </header>
     <!------ main ------>
     <main> 
-        <div class="selector">
-            <div class="master master-select" id="master-button" onclick="master(click)">
+        <div class="selector" >
+            <div class="master-select master" id="master-button" onclick="master(click)">
                 <span>استاد</span>
             </div>
-            <div class="student" onclick="master(click)" >
+            <div class="student-select student" id="student-button" onclick="master(click2)" >
                 <span>دانشجو</span>
             </div>
         </div>
-        <div class="master-class" id="master-page">
+        <div class="master-class d-none" id="master-page">
             <div class="course-name__date">
                 <div class="course-name">
                     <label for="course-name">عنوان دوره:</label>
@@ -141,7 +141,7 @@
                 </div>
             </div>
         </div>
-        <div class="student-class" id="student-page">
+        <div class="student-class d-none" id="student-page">
             <div class="course-name__date">
                 <div class="course-name">
                     <label for="course-name">عنوان دوره:</label>

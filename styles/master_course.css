@@ -1,9 +1,10 @@
 main > .selector > .master-select{
-    background-color: aliceblue;
+    background-color: #8B0861 !important;
+    color: #ffffff !important;    
 }
 
 main > .master-class {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     width: 100%;
     padding: 30px;
