@@ -8,6 +8,12 @@ main > .selector > .student-select{
     background-color: #8B0861;
 }
 
+main > .selector > .student-select:hover {
+    transition: 0.5s;
+    border: 1px solid #8B0861;
+    font-size: 18px;
+}
+
 main > .student-class {
     display: flex;
     flex-direction: column;
@@ -15,7 +21,7 @@ main > .student-class {
     padding: 30px;
     row-gap: 20px;
     border-radius: 0 0 8px 8px;
-    background-color: aquamarine;
+    background-color: #ffffff;
     border: 1px solid #efbadf;
     box-shadow: 0 5px 20px #efbadf;
 }

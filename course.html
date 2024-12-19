@@ -80,10 +80,10 @@
     <!------ main ------>
     <main> 
         <div class="selector" >
-            <div class="master-select master" id="master-button" onclick="master(click)">
+            <div class="master-select master" id="master-button" onclick="master(click)" style="transition: 0.5s;">
                 <span>استاد</span>
             </div>
-            <div class="student-select student" id="student-button" onclick="master(click2)" >
+            <div class="student-select student" id="student-button" onclick="master(click)" style="transition: 0.5s;">
                 <span>دانشجو</span>
             </div>
         </div>
@@ -129,14 +129,22 @@
                         <textarea class="input" name="more" placeholder="..."></textarea>
                     </div>
                 </div>
-                <div class="course-degree">
-                    <div class="with-degree">
-                        <input type="radio" name="degree" id="yes">
-                        <label for="yes">دارای مدرک فنی‌حرفه‌ای</label>
+                <div class="course-degree__course-file">
+                    <div class="course-degree">
+                        <div class="with-degree">
+                            <input type="radio" name="degree" id="yes" checked> 
+                            <label for="yes">دارای مدرک فنی‌حرفه‌ای</label>
+                        </div>
+                        <div class="without-degree">
+                            <input type="radio" name="degree" id="no" >
+                            <label for="no">فاقد مدرک فنی‌حرفه‌ای</label>
+                        </div>
                     </div>
-                    <div class="without-degree">
-                        <input type="radio" name="degree" id="no" >
-                        <label for="no">فاقد مدرک فنی‌حرفه‌ای</label>
+                    <div class="course-file">
+                        <span>فایل سرفصل‌های فنی‌حرفه‌ای را اینجا آپلود کنید.</span>
+                        <br>
+                        <!-- <label for="file">دانلود</label> -->
+                        <input type="file" name="file" id="file" >
                     </div>
                 </div>
             </div>
@@ -175,7 +183,7 @@
             <div class="order">
                 <div class="course-student__write-more">
                     <div class="course-master">
-                        <label for="master-name">مدرس:</label>
+                        <label for="master-name">مدرس پیشنهادی:</label>
                         <input class="input" name="master-name" id="master-name" placeholder="مهندس کوهجانی">
                     </div>
                     <div class="write-more">
