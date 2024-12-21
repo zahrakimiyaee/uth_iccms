@@ -72,9 +72,7 @@ function master (click) {
                                 student_page.classList.add("d-none");
                                 student_button.classList.add("student");
                                 master_page.classList.remove("master-class");
-                                master_button.classList.remove("master-select");
-                    console.log("im in");
-        
+                                master_button.classList.remove("master-select");        
                             }
                         }
                     }
@@ -84,6 +82,48 @@ function master (click) {
     }
 }
 
+function with_degree (select){
+    let display_y = document.getElementById("display_y");
+    if(select){
+        if(!display_y.classList.contains("course-file")){
+            display_y.classList.add("course-file");
+            without_degree(1);
+        }
+        else{
+            if(select===1){
+                display_y.classList.remove("course-file");
+                select=0;
+            }
+        }
+    }
+}
 
+function without_degree (select){
+    let display_n = document.getElementById("display_n");
+    if(select){
+        if(display_n.classList.contains("course-text-d-none")){
+            display_n.classList.remove("course-text-d-none");
+            with_degree(1);
+        }else{
+            if(select===1){
+                display_n.classList.add("course-text-d-none");
+                select=0;
+            }
+        }
+    }
+}
+
+function write_more (click){
+    let textarea = document.getElementById("textarea");
+    if(click){
+        if(!textarea.classList.contains("d-none")){
+            textarea.classList.add("d-none");
+        }else{
+            if(textarea.classList.contains("d-none")){
+                textarea.classList.remove("d-none");
+            }
+        }
+    }
+}
 
 

@@ -62,7 +62,7 @@
                     <a href="#">اطلاعیه‌ها</a>
                 </li>
                 <li> 
-                    <a href="https://www.torbath.ac.ir/" target="_blank">دانشگاه تربت‌حیدریه</a>
+                    <a href="./course.html">درخواست دوره</a>
                 </li>
                 <li> 
                     <a href="./about_us.html">درباره ما</a>
@@ -132,22 +132,27 @@
                 <div class="course-degree__course-file">
                     <div class="course-degree">
                         <div class="with-degree">
-                            <input type="radio" name="degree" id="yes" checked> 
+                            <input type="radio" name="degree" id="yes" onclick="with_degree(select)" checked> 
                             <label for="yes">دارای مدرک فنی‌حرفه‌ای</label>
                         </div>
                         <div class="without-degree">
-                            <input type="radio" name="degree" id="no" >
+                            <input type="radio" name="degree" id="no" onclick="without_degree(select)">
                             <label for="no">فاقد مدرک فنی‌حرفه‌ای</label>
                         </div>
                     </div>
-                    <div class="course-file">
+                    <div class="course-file course-file-d-none" id="display_y">
                         <span>فایل سرفصل‌های فنی‌حرفه‌ای را اینجا آپلود کنید.</span>
                         <br>
                         <!-- <label for="file">دانلود</label> -->
                         <input type="file" name="file" id="file" >
                     </div>
+                    <div class="course-text course-text-d-none" id="display_n">
+                        <span>سرفصل‌های دوره را اینجا بنویسید.</span>
+                        <textarea></textarea>
+                    </div>
                 </div>
             </div>
+            <a href="#" class="register">ثبت درخواست</a>
         </div>
         <div class="student-class d-none" id="student-page">
             <div class="course-name__date">
@@ -155,9 +160,9 @@
                     <label for="course-name">عنوان دوره:</label>
                     <input class="input" type="text" id="course-name" placeholder="برنامه‌نویسی تحت‌وب">
                 </div>
-                <div class="course-startdate">
-                    <label for="start-date">تاریخ شروع:</label>
-                    <input class="input" type="date" id="start-date">
+                <div class="course-master">
+                    <label for="master-name">مدرس پیشنهادی:</label>
+                    <input class="input" name="master-name" id="master-name" placeholder="مهندس کوهجانی">
                 </div>
                 <div class="course-date">
                     <label for="course-date">زمان برگزاری:</label>
@@ -180,28 +185,14 @@
                     </select>
                 </div>
             </div>
-            <div class="order">
-                <div class="course-student__write-more">
-                    <div class="course-master">
-                        <label for="master-name">مدرس پیشنهادی:</label>
-                        <input class="input" name="master-name" id="master-name" placeholder="مهندس کوهجانی">
-                    </div>
-                    <div class="write-more">
-                        <label for="more">توضیحات بیشتر:</label>
-                        <textarea class="input" name="more" placeholder="..."></textarea>
-                    </div>
-                </div>
-                <div class="course-degree">
-                    <div class="with-degree">
-                        <input type="radio" name="degree" id="yes">
-                        <label for="yes">دارای مدرک فنی‌حرفه‌ای</label>
-                    </div>
-                    <div class="without-degree">
-                        <input type="radio" name="degree" id="no" >
-                        <label for="no">فاقد مدرک فنی‌حرفه‌ای</label>
-                    </div>
-                </div>
-            </div>
+            <label class="write-more">
+                <input type="checkbox" onclick="write_more(click)">توضیحات بیشتر:
+            </label>
+            <textarea class="input d-none" name="more" id="textarea" ></textarea>
+            <label>
+                <input type="checkbox" name="tik" id="tik">دوره دارای تاییده فنی‌حرفه‌ای باشد.
+            </label>
+            <a href="#" class="register">ثبت درخواست</a>
         </div>
     </main>
     <!------ footer  ------>

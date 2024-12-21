@@ -21,12 +21,6 @@ main > .master-class > .course-name__date {
     /* justify-content: space-around; */
 }
 
-/* main > .master-class > .course-name__date > .course-name ,
-main > .master-class > .course-name__date > .course-startdate ,
-main > .master-class > .course-name__date > .course-date {
-    /* display: flex; */
-    /* flex-direction: column; */
-
 main > .master-class .input {
     padding: 10px 10px;
     border-radius: 8px;
@@ -37,6 +31,7 @@ main > .master-class .input {
 main > .master-class > .order {
     display: flex;
     column-gap: 10px;
+    height: auto;
 }
 
 main > .master-class > .order > .course-master__write-more{
@@ -51,11 +46,13 @@ main > .master-class > .order > .course-master__write-more > .write-more {
     display: flex;
     width: 80%;
     flex-direction: column;
+    row-gap: 12px;
 }
 
 main > .master-class > .order > .course-master__write-more > .write-more > textarea {
     min-width: 100%;
     min-height: 100px;
+    /* max-height: max-content; */
 }
 
 main > .master-class > .order > .course-degree__course-file {
@@ -69,17 +66,21 @@ main > .master-class > .order > .course-degree__course-file > .course-degree {
     display: flex;
     width: 100%; 
     column-gap: 20px;
+    align-items: center;
+    min-height: 50px;
+}
+
+main > .master-class > .order > .course-degree__course-file > .course-file-d-none{
+    display: none;
 }
 
 main > .master-class > .order > .course-degree__course-file > .course-file{
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     padding: 12px;
-    box-shadow: 1px 1px 10px #f3eff2;
-    border: 1px solid #f3eff2;
+    border: 1px solid rgba(190, 189, 189,0.6);
+    box-shadow: 1px 1px 2px rgba(190, 189, 189,0.6) ;
     border-radius: 8px;
-    /* row-gap: 1px; */
 }
 
 main > .master-class > .order > .course-degree__course-file > .course-file > input{
@@ -89,4 +90,39 @@ main > .master-class > .order > .course-degree__course-file > .course-file > inp
     background-color: #f7f0f5;
     box-shadow: 3px 3px 10px #e3dde1;
     border: 1px solid #e3dde1;
+}
+
+main > .master-class > .order > .course-degree__course-file > .course-text-d-none {
+    display: none !important;
+}
+
+main > .master-class > .order > .course-degree__course-file > .course-text {
+    display: flex;
+    flex-direction: column; 
+    padding: 12px;
+    row-gap: 12px;
+    border: 1px solid rgba(190, 189, 189,0.6);
+    box-shadow: 1px 1px 2px rgba(190, 189, 189,0.6) ;
+    border-radius: 8px;
+}
+
+main > .master-class > .order > .course-degree__course-file > .course-text > textarea{
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #f7f0f5;
+    box-shadow: 3px 3px 10px #e3dde1;
+    border: 1px solid #e3dde1;
+    min-width: 100%;
+    min-height: 100px;
+    /* height: fit-content; */
+}
+
+main > .master-class > .register {
+    padding: 12px 24px;
+    background-color: #8B0861;
+    color: #ffffff;
+    align-self: center;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
 }
