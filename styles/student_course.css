@@ -14,6 +14,10 @@ main > .selector > .student-select:hover {
     font-size: 18px;
 }
 
+main > .student-class-d-none {
+    display: none !important;
+}
+
 main > .student-class {
     display: flex;
     flex-direction: column;
@@ -52,6 +56,7 @@ main > .student-class > label {
     column-gap: 8px;
     font-size: 15px;
     color: rgba(1, 1, 1, 0.8);
+    cursor: pointer;
 }
 
 main > .student-class > .register {

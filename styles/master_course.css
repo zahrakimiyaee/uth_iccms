@@ -3,6 +3,10 @@ main > .selector > .master-select{
     color: #ffffff !important;    
 }
 
+main > .master-class-d-none {
+    display: none;
+}
+
 main > .master-class {
     display: flex !important;
     flex-direction: column;
