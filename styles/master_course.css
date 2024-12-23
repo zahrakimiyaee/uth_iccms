@@ -74,6 +74,18 @@ main > .master-class > .order > .course-degree__course-file > .course-degree {
     min-height: 50px;
 }
 
+main > .master-class > .order > .course-degree__course-file > .course-degree > div {
+    display: inherit;
+    align-items: center;
+    column-gap: 5px;
+}
+
+main > .master-class > .order > .course-degree__course-file > .course-degree > div > label ,
+main > .master-class > .order > .course-degree__course-file > .course-degree > div > input 
+{
+    cursor: pointer;
+}
+
 main > .master-class > .order > .course-degree__course-file > .course-file-d-none{
     display: none;
 }
