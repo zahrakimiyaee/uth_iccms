@@ -55,7 +55,7 @@ function master (click) {
     }
 }
 
-function student (click) {
+function student (click){
     let student_page = document.getElementById("student-page");
     let student_button = document.getElementById("student-button");
     if(click){
@@ -71,7 +71,6 @@ function student (click) {
             }
         }
     }
-    
 }
 /**************************/
 function with_degree (select){

@@ -1,14 +1,14 @@
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* width: 100%; */
 }
 
 main > .titr1 {
-    display: flex;
-    width: 95%;
-    margin: 20px 0;
+    /* display: flex; */
+    /* width: 95%; */
+    /* margin: 20px 0; */
 }
 
 main > .titr1 > h3 {
@@ -17,7 +17,7 @@ main > .titr1 > h3 {
 }
 
 main > .titr1 > button {
-    margin-right: auto;
+    /* margin-right: auto; */
     background-color: transparent;
     color: #8B0861;
     font-size: 15px;
@@ -25,35 +25,36 @@ main > .titr1 > button {
 }
 
 main > .galery1 {
-    width: 95%;
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 30px;
+    /* width: 95%; */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* row-gap: 30px; */
     /* justify-self: center; */
-    justify-content: center;
-    column-gap: 12px;
-    margin-bottom: 30px;
+    /* justify-content: center; */
+    /* column-gap: 12px; */
+    margin-bottom: 30px;    
 }
 
 /* Media query */
-@media screen and (min-width: 1367px) {
+/* @media screen and (min-width: 1367px) {
     main > .galery1 {
         justify-content: flex-start;
     }
-}
+} */
 
 main > .galery1 > .product {
     position: relative;
     padding: 10px;
     border: 1px solid #efbadf;
     line-height: 25px;
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     align-items: center;
     border-radius: 15px;
-    width: 250px;
+    /* width: 250px; */
     box-shadow: 1px 1px 15px #efbadf;
-    row-gap: 15px;
+    /* row-gap: 15px; */
+    /* margin: 8px; */
 }
 
 main > .galery1 > .product:hover {
@@ -62,8 +63,8 @@ main > .galery1 > .product:hover {
 }
 
 main > .galery1 > .product > .description > .certificate{
-    display: flex;
-    width: 70%;
+    /* display: flex; */
+    width: fit-content;
     padding: 0 5px;
     align-items: center;
     background-color: #4CAF50;
@@ -115,7 +116,7 @@ main > .galery1 > .product > img {
     border-radius: 8px;
     aspect-ratio: 2/2;
     object-fit: scale-down;
-    max-width: 200px;
+    /* max-width: 200px; */
     width: 100%;
     max-height: 200px;
     height: 100%;
