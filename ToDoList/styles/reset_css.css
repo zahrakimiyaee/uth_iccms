@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Byekan';
+    src: url('../assets/fonts/BYekan.woff2') format('woff2'),
+         url('../assets/fonts/BYekan.woff') format('woff') ,
+         url('../assets/fonts/BYekan.ttf') format('truetype') ;
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, div, section, header,button , footer, main, p, h1, h2, h3, h4, h5, h6, a, ul, ol, table, li , span , label , input , select , textarea{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: 'Byekan' , sans-serif;
+    text-decoration: none;
+    outline: none;
+}
