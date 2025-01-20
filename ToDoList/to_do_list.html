@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/reset_css.css"/>
-    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="./styles/to-do-list.css">
     <link rel="stylesheet" href="./styles/fontawesome/css/all.css">
     <title>To Do List</title>
@@ -12,26 +12,54 @@
 <body>
     <main class="container">
         <div class="row justify-content-center m-5 border">
-            <div class="col col-9 m-2 justify-content-center form-border">
-                <div class="row">
+            <div class="d-none col col-9 m-2 justify-content-center form-border" id="task_form">
+                <button type="button" class="btn-close" onclick="close_task(click)"></button>
+                <div class="row p-2">
                     <label class="col-2 label-style" for="title">عنوان :</label>
-                    <input class="col-4 p-1 input_border" type="text" name="title">
+                    <input class="col-9 p-1 input_border" type="text" name="title" id="title" required>
                     <div class="w-100 d-block gy-2"></div>
                     <label class="col-2 label-style" for="status">وضعیت :</label>
-                    <input class="col-4 p-1 input_border" type="text" name="status">
+                    <input class="col-9 p-1 input_border" type="text" name="status" id="status" required>
                     <div class="w-100 d-block gy-2"></div>
                     <label class="col-3 label-style" for="deadline">مدت زمان انجام کار :</label>
-                    <input class="col-3 p-1 input_border" type="text" name="deadline">
+                    <input class="col-4 p-1 input_border" type="text" name="deadline" id="deadline" required>
                     <div class="w-100 d-block gy-2"></div>
                     <label class="col-3 label-style" for="date">تاریخ تغییر وضعیت :</label>
-                    <input class="col-3 p-1 input_border" type="datetime" name="date">
+                    <input class="col-4 p-1 input_border" type="datetime" name="date" id="date" required>
                 </div>
-                <div class="row justify-content-center mt-3 ">
-                    <button class=" col-2 btn btn-warning ">افزودن</button>
+                <div class="row justify-content-center mt-3">
+                    <button class="col-2 btn btn-warning" onclick="add_task(click)">افزودن</button>
+                </div>
+            </div>
+            <div class="col col-9 mb-3 align-items-center">
+                <div class="row mb-3">
+                    <span class="col-3 fs-4 ">درحال انجام :</span>
+                </div>
+                <div class="row align-items-center task-border">
+                    <div class="col-3">
+                        <p class="fs-6" id="title-output">درس خوندن</p>
+                    </div>
+                    <div class="col-2 ">
+                        <div class="row g-1 mb-2 border-bottom border-success">
+                            <span class="fs-6">زمان باقیمانده :</span>
+                        </div>
+                        <p class="fs-6" id="hour-output">2 ساعت</p>
+                    </div>
+                    <div class="col-2">
+                        <div class="row g-1 mb-2 border-bottom border-success">
+                            <span class="fs-6">تاریخ ایجاد :</span>
+                        </div>
+                        <p class="fs-6" id="date-output">3/12/1414</p>
+                    </div>
+                    <div class="col col-3 btn-group ms-auto " role="group">
+                        <i class="fa-regular fa-circle-check btn btn-success"></i>
+                        <i class="fa-regular fa-pen-to-square btn btn-secondary"></i>
+                        <i class="fa-regular fa-trash btn btn-danger"></i>
+                    </div>
                 </div>
             </div>
             <div class="col col-9 mt-2">
-                <div class="add">
+                <div class="add" onclick="create_task(click)">
                     <i class="fa-solid fa-plus"></i>
                 </div>
             </div>
