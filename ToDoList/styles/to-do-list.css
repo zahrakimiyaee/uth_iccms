@@ -60,3 +60,11 @@
     border: 1px solid rgb(204, 226, 203);
     box-shadow: 2px 2px 10px rgba(204, 226, 203,0.5);  
 }
+
+.done-task-border {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #ff968a;
+    border: 1px solid rgb(204, 226, 203);
+    box-shadow: 2px 2px 10px rgba(204, 226, 203,0.5);      
+}
