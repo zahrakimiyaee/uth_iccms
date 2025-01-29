@@ -1,3 +1,7 @@
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+
 const tasks = [] ;
 let id =0
 let form = document.getElementById("task_form");
@@ -222,7 +226,7 @@ function finished_task_0_delete(click) {
     if (click) {
         tasks.splice(0, 1);
         finished_task_0.classList.add("d-none");
-        if(doing_task_1.classList.contains("d-none") && doing_task_2.classList.contains("d-none") && doing_task_3.classList.contains("d-none")){
+        if(finished_task_1.classList.contains("d-none") && finished_task_2.classList.contains("d-none") && finished_task_3.classList.contains("d-none")){
             finished_parent_tag.classList.add("d-none");
         }    
     }    
@@ -232,7 +236,7 @@ function finished_task_1_delete(click) {
     if (click) {
         tasks.splice(1, 1);
         finished_task_1.classList.add("d-none");
-        if(doing_task_0.classList.contains("d-none") && doing_task_2.classList.contains("d-none") && doing_task_3.classList.contains("d-none")){
+        if(finished_task_0.classList.contains("d-none") && finished_task_2.classList.contains("d-none") && finished_task_3.classList.contains("d-none")){
             finished_parent_tag.classList.add("d-none");
         }    
     }    
@@ -242,17 +246,17 @@ function finished_task_2_delete(click) {
     if (click) {
         tasks.splice(2, 1);
         finished_task_2.classList.add("d-none");
-        if(doing_task_1.classList.contains("d-none") && doing_task_0.classList.contains("d-none") && doing_task_3.classList.contains("d-none")){
+        if(finished_task_1.classList.contains("d-none") && finished_task_0.classList.contains("d-none") && finished_task_3.classList.contains("d-none")){
             finished_parent_tag.classList.add("d-none");
         }    
     }    
 }
 
-function finished_task_0_delete(click) {
+function finished_task_3_delete(click) {
     if (click) {
         tasks.splice(3, 1);
         finished_task_3.classList.add("d-none");
-        if(doing_task_1.classList.contains("d-none") && doing_task_2.classList.contains("d-none") && doing_task_0.classList.contains("d-none")){
+        if(finished_task_1.classList.contains("d-none") && finished_task_2.classList.contains("d-none") && finished_task_0.classList.contains("d-none")){
             finished_parent_tag.classList.add("d-none");
         }    
     }    

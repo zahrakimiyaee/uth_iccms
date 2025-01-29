@@ -12,6 +12,10 @@
 <body>
     <main class="container">
         <div class="row justify-content-center m-5 border">
+            <div class="col col-5 text-center">
+                <i class="fa-regular fa-list-check fs-2"></i>   
+                <span class="fs-2 fw-bold mx-2"> To Do List</span>
+            </div>
             <!--------- form ----------->
             <div class="d-none col col-9 m-2 justify-content-center form-border" id="task_form">
                 <button type="button" class="btn-close" onclick="close_task(click)"></button>
@@ -54,9 +58,9 @@
                         <p class="fs-6" id="date_output_0">3/12/1414</p>
                     </div>
                     <div class="col col-3 btn-group ms-auto " role="group">
-                        <i class="fa-regular fa-circle-check btn btn-success" onclick="task_0_finished(click)"></i>
-                        <i class="fa-regular fa-pen-to-square btn btn-secondary"></i>
-                        <i class="fa-regular fa-trash btn btn-danger" onclick="task_0_delete(click)"></i>
+                        <i class="fa-regular fa-circle-check btn btn-success" onclick="task_0_finished(click)" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="تکمیل تسک"></i>
+                        <i class="fa-regular fa-pen-to-square btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="ویرایش تسک"></i>
+                        <i class="fa-regular fa-trash btn btn-danger" onclick="task_0_delete(click)" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="حذف تسک"></i>
                     </div>
                 </div>
                 <!------------ task1 ------------>
@@ -77,9 +81,9 @@
                         <p class="fs-6" id="date_output_1">3/12/1414</p>
                     </div>
                     <div class="col col-3 btn-group ms-auto " role="group">
-                        <i class="fa-regular fa-circle-check btn btn-success" onclick="task_1_finished(click)"></i>
-                        <i class="fa-regular fa-pen-to-square btn btn-secondary"></i>
-                        <i class="fa-regular fa-trash btn btn-danger" onclick="task_1_delete(click)"></i>
+                        <i class="fa-regular fa-circle-check btn btn-success" onclick="task_1_finished(click)" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="تکمیل تسک"></i>
+                        <i class="fa-regular fa-pen-to-square btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="ویرایش تسک"></i>
+                        <i class="fa-regular fa-trash btn btn-danger" onclick="task_1_delete(click)" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="حذف تسک"></i>
                     </div>
                 </div>
                 <!------------ task2 ------------>
@@ -100,9 +104,9 @@
                         <p class="fs-6" id="date_output_2">3/12/1414</p>
                     </div>
                     <div class="col col-3 btn-group ms-auto " role="group">
-                        <i class="fa-regular fa-circle-check btn btn-success" onclick="task_2_finished(click)"></i>
-                        <i class="fa-regular fa-pen-to-square btn btn-secondary"></i>
-                        <i class="fa-regular fa-trash btn btn-danger" onclick="task_2_delete(click)"></i>
+                        <i class="fa-regular fa-circle-check btn btn-success" onclick="task_2_finished(click)" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="تکمیل تسک"></i>
+                        <i class="fa-regular fa-pen-to-square btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="ویرایش تسک"></i>
+                        <i class="fa-regular fa-trash btn btn-danger" onclick="task_2_delete(click)" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="حذف تسک"></i>
                     </div>
                 </div>
                 <!------------ task3 ------------>
@@ -123,9 +127,9 @@
                         <p class="fs-6" id="date_output_3">3/12/1414</p>
                     </div>
                     <div class="col col-3 btn-group ms-auto " role="group">
-                        <i class="fa-regular fa-circle-check btn btn-success" onclick="task_3_finished(click)"></i>
-                        <i class="fa-regular fa-pen-to-square btn btn-secondary"></i>
-                        <i class="fa-regular fa-trash btn btn-danger" onclick="task_3_delete(click)"></i>
+                        <i class="fa-regular fa-circle-check btn btn-success" onclick="task_3_finished(click)" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="تکمیل تسک"></i>
+                        <i class="fa-regular fa-pen-to-square btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="ویرایش تسک"></i>
+                        <i class="fa-regular fa-trash btn btn-danger" onclick="task_3_delete(click)" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="حذف تسک"></i>
                     </div>
                 </div>
             </div>
@@ -152,8 +156,8 @@
                         <p class="fs-6 text-decoration-line-through" id="finished_date_output_0">3/12/1414</p>
                     </div>
                     <div class="col col-2 btn-group ms-auto " role="group">
-                        <i class="fa-regular fa-trash-arrow-up btn btn-dark"></i>
-                        <i class="fa-regular fa-xmark btn btn-danger" onclick="finished_task_0_delete(click)"></i>
+                        <i class="fa-regular fa-trash-arrow-up btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="بازگردانی تسک"></i>
+                        <i class="fa-regular fa-xmark btn btn-danger" onclick="finished_task_0_delete(click)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="حذف تسک"></i>
                     </div>
                 </div>
                 <!------------ finished_task_1 ------------>
@@ -174,8 +178,8 @@
                         <p class="fs-6 text-decoration-line-through" id="finished_date_output_1">3/12/1414</p>
                     </div>
                     <div class="col col-2 btn-group ms-auto " role="group">
-                        <i class="fa-regular fa-trash-arrow-up btn btn-dark"></i>
-                        <i class="fa-regular fa-xmark btn btn-danger" onclick="finished_task_1_delete(click)"></i>
+                        <i class="fa-regular fa-trash-arrow-up btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="بازگردانی تسک"></i>
+                        <i class="fa-regular fa-xmark btn btn-danger" onclick="finished_task_1_delete(click)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="حذف تسک"></i>
                     </div>
                 </div>
                 <!------------ finished_task_2 ------------>
@@ -196,8 +200,8 @@
                         <p class="fs-6 text-decoration-line-through" id="finished_date_output_2">3/12/1414</p>
                     </div>
                     <div class="col col-2 btn-group ms-auto " role="group">
-                        <i class="fa-regular fa-trash-arrow-up btn btn-dark"></i>
-                        <i class="fa-regular fa-xmark btn btn-danger" onclick="finished_task_2_delete(click)"></i>
+                        <i class="fa-regular fa-trash-arrow-up btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="بازگردانی تسک"></i>
+                        <i class="fa-regular fa-xmark btn btn-danger" onclick="finished_task_2_delete(click)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="حذف تسک"></i>
                     </div>
                 </div>
                 <!------------ finished_task_3 ------------>
@@ -218,8 +222,8 @@
                         <p class="fs-6 text-decoration-line-through" id="finished_date_output_3">3/12/1414</p>
                     </div>
                     <div class="col col-2 btn-group ms-auto " role="group">
-                        <i class="fa-regular fa-trash-arrow-up btn btn-dark"></i>
-                        <i class="fa-regular fa-xmark btn btn-danger" onclick="finished_task_3_delete(click)"></i>
+                        <i class="fa-regular fa-trash-arrow-up btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="بازگردانی تسک"></i>
+                        <i class="fa-regular fa-xmark btn btn-danger" onclick="finished_task_3_delete(click)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="حذف تسک"></i>
                     </div>
                 </div>
             </div>
