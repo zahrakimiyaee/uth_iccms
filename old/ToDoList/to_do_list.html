@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset_css.css"/>
+    <link rel="stylesheet" href="./styles/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./styles/to-do-list.css">
+    <link rel="stylesheet" href="./styles/fontawesome/css/all.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <main class="container">
+        <div class="row justify-content-center m-5 border">
+            <div class="col col-5 text-center">
+                <i class="fa-regular fa-list-check fs-2"></i>   
+                <span class="fs-2 fw-bold mx-2"> To Do List</span>
+            </div>
+            <!--------- form ----------->
+            <div class="d-none col col-9 m-2 justify-content-center form-border" id="task_form">
+                <button type="button" class="btn-close" onclick="close_task(click)"></button>
+                <div class="row text-center p-2">
+                    <label class="col-2 label-style" for="title">عنوان :</label>
+                    <input class="col-3 p-1 input_border" type="text" name="title" id="title" required>
+                    <label class="col-3 label-style" for="deadline">مدت زمان انجام کار :</label>
+                    <input class="col-2 p-1 input_border" type="time" name="deadline" id="deadline" required>
+                    <div class="w-100 d-block gy-2"></div>
+                    <label class="col-2 label-style" for="status">وضعیت :</label>
+                    <input class="col-3 p-1 input_border" type="text" name="status" id="status" placeholder="درحال انجام" readonly>
+                    <label class="col-3 label-style" for="date">تاریخ تغییر وضعیت :</label>
+                    <input class="col-3 p-1 input_border" type="date" name="date" id="date" required>
+                    <div class="w-100 d-block gy-2"></div>
+                </div>
+                <div class="row justify-content-center mt-3">
+                    <button class="col-2 btn btn-warning" id="add_btn" onclick="add_task(click)" >افزودن</button>
+                </div>
+            </div>
+            <!------------ test task ------------>
+            <div id="test_task"></div>
+            <!------------ doing ------------>
+            <div class="d-none col col-9 mb-3 align-items-center " id="parent_tag">
+                <div class="row mb-3">
+                    <span class="col-3 fs-4 ">درحال انجام :</span>
+                </div>
+                <!------------ task0 ------------>
+                <div class="d-none row align-items-center task-border mb-1" id="doing_task_0">
+                    <div class="col-3">
+                        <p class="fs-6" id="title_output_0"></p>
+                    </div>
+                    <div class="col-2">
+                        <div class="row g-1 mb-2 border-bottom border-success">
+                            <span class="fs-6">زمان باقیمانده :</span>
+                        </div>
+                        <p class="fs-6" id="hour_output_0">2 ساعت</p>
+                    </div>
+                    <div class="col-2">
+                        <div class="row g-1 mb-2 border-bottom border-success">
+                            <span class="fs-6">تاریخ ایجاد :</span>
+                        </div>
+                        <p class="fs-6" id="date_output_0">3/12/1414</p>
+                    </div>
+                    <div class="col col-3 btn-group ms-auto " role="group">
+                        <i class="fa-regular fa-circle-check btn btn-success" onclick="task_0_finished(click)" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="تکمیل تسک"></i>
+                        <i class="fa-regular fa-pen-to-square btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="ویرایش تسک"></i>
+                        <i class="fa-regular fa-trash btn btn-danger" onclick="task_0_delete(click)" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="حذف تسک"></i>
+                    </div>
+                </div>
+            </div>
+            <!------------ finished ------------>
+            <div class="d-none col col-9 mb-3 align-items-center" id="finished_parent_tag">
+                <div class="row mb-3">
+                    <span class="col-3 fs-4 ">تمام شده :</span>
+                </div>
+                <!------------ finished_task_0 ------------>
+                <div class="d-none row align-items-center done-task-border mb-1" id="finished_task_0">
+                    <div class="col-3">
+                        <p class="fs-6 text-decoration-line-through" id="finished_title_output_0">درس خوندن</p>
+                    </div>
+                    <div class="col-2">
+                        <div class="row g-1 mb-2 border-bottom border-danger">
+                            <span class="fs-6 ">زمان باقیمانده :</span>
+                        </div>
+                        <p class="fs-6 text-decoration-line-through" id="finished_hour_output_0">2 ساعت</p>
+                    </div>
+                    <div class="col-2">
+                        <div class="row g-1 mb-2 border-bottom border-danger">
+                            <span class="fs-6">تاریخ ایجاد :</span>
+                        </div>
+                        <p class="fs-6 text-decoration-line-through" id="finished_date_output_0">3/12/1414</p>
+                    </div>
+                    <div class="col col-2 btn-group ms-auto " role="group">
+                        <i class="fa-regular fa-trash-arrow-up btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="بازگردانی تسک"></i>
+                        <i class="fa-regular fa-xmark btn btn-danger" onclick="finished_task_0_delete(click)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="حذف تسک"></i>
+                    </div>
+                </div>
+            </div>
+            <!------------ add_button ------------>
+            <div class="col col-9 mt-2">
+                <div class="add" onclick="create_task(click)">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/Car.js"></script>
+</body>
+</html>
