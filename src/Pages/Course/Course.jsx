@@ -28,22 +28,33 @@ export default function Course() {
 					</div>
 					<div className="content__inputs__time">
 						<label htmlFor="course-time">تاریخ شروع :</label>
-						<select name="day" id="">
-							<option value="">شنبه</option>
-							<option value="">یکشنبه</option>
-							<option value="">دوشنبه</option>
-							<option value="">سه‌‌شنبه</option>
-							<option value="">چهارشنبه</option>
-							<option value="">پنجشنبه</option>
-						</select>
-						<select name="hour" id="">
-							<option value="">8-10</option>
-							<option value="">10-12</option>
-							<option value="">12-14</option>
-							<option value="">14-16</option>
-							<option value="">16-18</option>
-							<option value="">18-20</option>
-						</select>
+						<div className="content__inputs__time__values">
+							<select name="day" id="">
+								<option value="">شنبه</option>
+								<option value="">یکشنبه</option>
+								<option value="">دوشنبه</option>
+								<option value="">سه‌‌شنبه</option>
+								<option value="">چهارشنبه</option>
+								<option value="">پنجشنبه</option>
+							</select>
+							<select name="hour" id="">
+								<option value="">8-10</option>
+								<option value="">10-12</option>
+								<option value="">12-14</option>
+								<option value="">14-16</option>
+								<option value="">16-18</option>
+								<option value="">18-20</option>
+							</select>
+						</div>
+					</div>
+					<div className="content__inputs__teacher">
+						<label htmlFor="course-teacher">مدرس :</label>
+						<input
+							type="text"
+							id="course-teacher"
+							placeholder="زهرا کیمیایی"
+							required
+						/>
 					</div>
 				</div>
 			</div>
