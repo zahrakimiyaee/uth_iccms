@@ -1,0 +1,178 @@
+@import "../../assets/sass/color-palet";
+
+%input__div {
+	display: flex;
+	// margin: 0.2rem;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.2rem;
+}
+
+%input {
+	width: 100%;
+	// align-self: center;
+	padding: 10px 10px;
+	border-radius: 8px;
+	font-size: 0.9rem;
+	border: 1px solid #e3dde1;
+	background-color: #f7f0f5;
+}
+
+%discription__div {
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	display: flex;
+	gap: 0.3rem;
+	align-items: center;
+	> i {
+		color: $primary-color;
+	}
+}
+
+.body {
+	width: 800px;
+	margin: 1rem auto 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@media screen and (max-width: 992px) {
+		width: 500px;
+	}
+	@media screen and (max-width: 576px) {
+		width: 350px;
+	}
+	&__title {
+		font-size: 1.5rem;
+		color: $primary-color;
+	}
+	// &__description {
+	// 	// color: ;
+	// }
+	.form {
+		display: flex;
+		gap: 1.5rem;
+		width: 100%;
+		margin: 1rem;
+		padding: 1rem;
+		border-radius: 15px;
+		border: 1px solid #efbadf;
+		box-shadow: 5px 5px 20px #efbadf;
+		@media screen and (max-width: 576px) {
+			flex-direction: column-reverse;
+			border: none;
+			box-shadow: none;
+			border-radius: none;
+			gap: 3rem;
+		}
+		&__inputs {
+			width: 70%;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto auto auto;
+			gap: 0.5rem;
+			@media screen and (max-width: 992px) {
+				display: flex;
+				flex-direction: column;
+			}
+			@media screen and (max-width: 576px) {
+				width: 100%;
+			}
+			&__name {
+				@extend %input__div;
+				input {
+					@extend %input;
+				}
+			}
+			&__subject {
+				@extend %input__div;
+
+				select {
+					@extend %input;
+				}
+			}
+			&__number {
+				@extend %input__div;
+
+				.input {
+					@extend %input;
+					direction: ltr;
+					> input {
+						background-color: transparent;
+					}
+				}
+			}
+			&__email {
+				@extend %input__div;
+
+				.input {
+					@extend %input;
+					direction: ltr;
+					> input {
+						width: 60%;
+						background-color: transparent;
+						margin-right: auto;
+						@media screen and (max-width: 992px) {
+							width: 55%;
+						}
+					}
+				}
+			}
+			&__message {
+				@extend %input__div;
+				grid-column: span 2;
+				textarea {
+					@extend %input;
+					min-height: 5rem;
+					// @media screen and (max-width: 992px) {
+					// 	min-height: ;
+					// }
+				}
+			}
+			&__submit {
+				display: flex;
+				justify-content: center;
+				grid-column: span 2;
+				> button {
+					padding: 0.5rem;
+					font-size: 0.9rem;
+					background-color: #8b0861;
+					color: #ffffff;
+					border-radius: 8px;
+				}
+			}
+		}
+		&__discription {
+			display: flex;
+			flex-direction: column;
+			row-gap: 1rem;
+			&__separator {
+				width: 90%;
+				border-color: rgba(139, 8, 97, 0.8);
+				margin: 0.5rem auto;
+			}
+			&__number {
+				@extend %discription__div;
+				> span {
+					margin-right: 1rem;
+					// text-indent: 1rem;
+				}
+			}
+			&__post-code {
+				@extend %discription__div;
+				text-align: left;
+				margin-left: 1rem;
+				// margin-right: auto;
+			}
+			&__address {
+				@extend %discription__div;
+				> span {
+					// text-indent: 1rem;
+					margin-right: 1rem;
+				}
+			}
+		}
+	}
+}

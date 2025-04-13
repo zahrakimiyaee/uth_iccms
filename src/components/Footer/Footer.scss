@@ -1,0 +1,85 @@
+@import "../../assets/sass/color-palet.scss";
+
+.footer {
+	background-color: $color-dark;
+	// background-color: aquamarine;
+	display: flex;
+	flex-direction: column;
+	padding: 12px;
+	> .top-footer {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		gap: 2rem;
+		> .top-footer__recent-courses,
+		.top-footer__quick-access {
+			display: flex;
+			flex-direction: column;
+			row-gap: 0.5rem;
+			@media screen and (max-width: 576px) {
+				flex: 0 0 100%;
+				align-items: center;
+			}
+			@media screen and (min-width: 577px) and (max-width: 991px) {
+				flex: 0 0 calc(50% - 1rem);
+			}
+
+			@media screen and (min-width: 992px) {
+				flex: 0 0 calc(20% - 1rem);
+			}
+			> label {
+				color: $text-light;
+				font-weight: 500;
+				font-size: 1rem;
+			}
+			> .top-footer__recent-corses__navbar > ul,
+			.top-footer__quick-access__navbar > ul {
+				display: flex;
+				flex-direction: column;
+				gap: 0.1rem;
+				@media screen and (max-width: 576px) {
+					align-items: center;
+				}
+				> li > a {
+					color: $text-gray;
+					font-size: 0.9rem;
+				}
+			}
+		}
+		> .top-footer__about {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			width: 35vw;
+			@media screen and (max-width: 576px) {
+				align-items: center;
+			}
+			@media screen and (max-width: 991px) {
+				flex: 0 0 100%;
+			}
+
+			@media screen and (min-width: 992px) {
+				flex: 0 0 40%;
+			}
+			> label {
+				color: $text-light;
+				font-weight: 500;
+				font-size: 1rem;
+			}
+			> p {
+				text-align: justify;
+				color: $text-gray;
+				font-size: 0.9rem;
+			}
+		}
+	}
+	> .bottom-footer {
+		height: 50px;
+		> .bottom-footer__copyright {
+			display: flex;
+			justify-content: center;
+			color: $text-gray;
+			font-size: 12px;
+		}
+	}
+}

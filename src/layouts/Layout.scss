@@ -1,0 +1,15 @@
+@import "../assets/sass/color-palet.scss";
+
+.main {
+	&__title {
+		color: $primary-color;
+		font-size: 2rem;
+		font-weight: 500;
+	}
+	&__cards {
+		// border: 5px solid red;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(12rem, 14rem - 0.5rem));
+		justify-content: space-around;
+	}
+}

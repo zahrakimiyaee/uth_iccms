@@ -1,16 +1,10 @@
-import "../styles/reset_css.css";
-import "../assets/fonts/fontawesome/css/all.css";
-// import "./Layout.css";
-import "./Layout.scss";
-import Header from "../components/Header/Header.jsx";
-import Footer from "../components/Footer/Footer.jsx";
-import ProductCard from "../components/ProductCard/ProductCard.jsx";
-import { ProductCardData } from "../components/ProductCard/productCardData.js";
+import "./Index.scss";
+import ProductCard from "../../components/ProductCard/ProductCard.jsx";
+import { ProductCardData } from "../../components/ProductCard/productCardData.js";
 
-export default function Layout({ children }) {
+export default function Index({ children }) {
 	return (
-		<body>
-			<Header />
+		<div>
 			<main className="container main">
 				<div className=" row my-3 main__title ">
 					<span className="h5">دوره های درحال برگزاری :</span>
@@ -29,7 +23,6 @@ export default function Layout({ children }) {
 					))}
 				</div>
 			</main>
-			<Footer />
-		</body>
+		</div>
 	);
 }

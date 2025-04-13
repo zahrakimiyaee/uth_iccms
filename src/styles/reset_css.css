@@ -1,11 +1,11 @@
-/* @font-face {
+@font-face {
 	font-family: "Byekan";
 	src: url("../assets/fonts/BYekan.woff2") format("woff2"),
 		url("../assets/fonts/BYekan.woff") format("woff"),
 		url("../assets/fonts/BYekan.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
-} */
+}
 
 html,
 body,

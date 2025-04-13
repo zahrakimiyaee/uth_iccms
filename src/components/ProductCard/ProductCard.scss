@@ -1,0 +1,83 @@
+@import "../../assets/sass/color-palet";
+
+.product {
+	display: flex;
+	flex-direction: column;
+	width: 13rem;
+	&__img {
+		width: 12rem;
+		height: 12rem;
+		object-fit: fill;
+	}
+	.description {
+		padding: 1rem;
+		display: grid;
+		gap: 0.5rem 0.3rem;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"title title"
+			"certificate certificate"
+			"teacher teacher"
+			"address address"
+			"more more"
+			"price register";
+
+		&__title {
+			grid-area: title;
+			color: $text-primary;
+			font-size: 0.9rem;
+			font-weight: bolder;
+		}
+		&__certificate--have,
+		&__certificate--havenot {
+			grid-area: certificate;
+			// grid-column: 2 /4span;
+			// background-color: aliceblue !important;
+		}
+		&__teacher {
+			grid-area: teacher;
+			display: flex;
+			flex-wrap: wrap;
+			display: inline;
+			&__title {
+				display: inline;
+				font-size: 0.9rem;
+				font-weight: 500;
+				color: $text-primary;
+			}
+			&__content {
+				display: inline;
+				font-size: 0.8rem;
+			}
+		}
+
+		&__address {
+			grid-area: address;
+			display: flexbox;
+			flex-wrap: wrap;
+			&__title {
+				font-size: 0.9rem;
+				font-weight: 500;
+				color: $text-primary;
+			}
+			&__content {
+				font-size: 0.8rem;
+			}
+		}
+		&__more {
+			grid-area: more;
+			color: $text-light;
+			background-color: $primary-color;
+		}
+		&__price {
+			grid-area: price;
+			display: flex;
+			flex-direction: column;
+		}
+		&__register {
+			grid-area: register;
+			color: $text-light;
+			background-color: $primary-color;
+		}
+	}
+}

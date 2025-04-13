@@ -1,0 +1,35 @@
+@import "../../assets/sass/color-palet";
+
+.button {
+	margin-right: auto;
+	background-color: #8b0861;
+	box-shadow: 1px 1px 15px #efbadf;
+	// outline: none;
+	@media screen and (max-width: 576px) {
+		border-radius: 10px;
+	}
+	> i {
+		color: $text-light;
+		@media screen and (max-width: 576px) {
+			font-size: 1.3rem;
+			font-weight: 400;
+		}
+	}
+	> span {
+		color: $text-light;
+		@media screen and (max-width: 576px) {
+			display: none;
+		}
+	}
+	&:hover {
+		box-shadow: 2px 2px 20px #efbadf;
+	}
+	&:focus {
+		outline: none !important;
+		// border: #8b0861;
+	}
+}
+// .button:focus:not(:focus-visible) {
+// 	outline: none !important;
+// 	border: 5px solid #f7f3f6;
+// }

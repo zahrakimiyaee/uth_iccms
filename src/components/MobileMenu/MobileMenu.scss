@@ -1,0 +1,49 @@
+@import "../../assets/sass/color-palet";
+
+.mobile-menu__parent {
+	z-index: 1;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0px;
+	right: 0px;
+	> .mobile-menu__backdrop {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.685);
+	}
+	> .mobile-menu__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		row-gap: 20px;
+		width: 75%;
+		padding: 20px;
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0.99);
+		> .mobile-menu__title {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			column-gap: 15px;
+			> i {
+				cursor: pointer;
+			}
+		}
+		> .mobile-menu__navbar > ul {
+			display: flex;
+			flex-direction: column;
+			row-gap: 10px;
+			> li {
+				border: 1px solid rgba(139, 8, 97, 0.2);
+				border-radius: 8px;
+				padding: 12px;
+				cursor: pointer;
+				> a {
+					color: #8b0861;
+				}
+			}
+		}
+	}
+}

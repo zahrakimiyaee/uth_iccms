@@ -1,101 +1,12 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./styles/reset_css.css" />
-		<link rel="stylesheet" href="./styles/globals.css" />
-		<link rel="stylesheet" href="./styles/mobile_menu.css" />
-		<link rel="stylesheet" href="./styles/header.css" />
-		<link rel="stylesheet" href="./styles/footer.css" />
-		<link rel="stylesheet" href="./styles/about_us.css" />
-		<link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.css" />
-		<link rel="icon" href="./assets/images/uni-logo.png" />
-		<title>about us</title>
-	</head>
-	<body>
-		<!-- start header -->
-		<header class="header">
-			<i
-				class="fa-solid fa-bars"
-				id="humicon"
-				onclick="mobileMenu(click)"
-			></i>
-			<div class="mobile_menu_div d-none" id="mobile">
-				<div
-					class="mobile_menu_backdrop_div"
-					onclick="mobileMenu(click)"
-				></div>
-				<div class="mobile_menu_content_div">
-					<div class="title">
-						<i
-							class="fa-regular fa-arrow-right"
-							onclick="mobileMenu(click)"
-						></i>
-						<strong>مرکز نوآفرینی و کارآفرینی </strong>
-					</div>
-					<nav aria-label="mobile_menu" class="mobile_menu">
-						<ul>
-							<li>
-								<a href="./index.html">صفحه اصلی</a>
-							</li>
-							<li>
-								<a href="#">اطلاعیه‌ها</a>
-							</li>
-							<li>
-								<a
-									href="https://www.torbath.ac.ir/"
-									target="_blank"
-									>دانشگاه تربت‌حیدریه</a
-								>
-							</li>
-							<li>
-								<a href="./about_us.html">درباره ما</a>
-							</li>
-							<li>
-								<a href="./contact_us.html">تماس باما</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-			<img class="logo" src="./assets/images/logo_white.png" />
-			<h1 class="name">
-				سامانه مدیریت دوره‌های آموزشی
-				<br />
-				مرکز نوآفرینی و کارآفرینی دانشگاه تربت‌حیدریه
+import "./AboutUs.scss";
+
+export default function AboutUs() {
+	return (
+		<section className="about-us">
+			<h1 className="about-us__title">
+				درباره سامانه مدیریت دوره‌های مرکز نوآوری:
 			</h1>
-			<nav aria-label="menu" class="navbar">
-				<ul>
-					<li>
-						<a href="./index.html">صفحه اصلی</a>
-					</li>
-					<li>
-						<a href="#">اطلاعیه‌ها</a>
-					</li>
-					<li>
-						<a href="https://www.torbath.ac.ir/" target="_blank"
-							>دانشگاه تربت‌حیدریه</a
-						>
-					</li>
-					<li>
-						<a href="./about_us.html">درباره ما</a>
-					</li>
-					<li>
-						<a href="./contact_us.html">تماس باما</a>
-					</li>
-				</ul>
-			</nav>
-			<a class="login" href="./auth.html">
-				<i class="fa-light fa-user"></i>
-				<span>ثبت نام / ورود</span>
-			</a>
-		</header>
-		<!-- end header -->
-		<!-- start body -->
-		<main>
-			<h1>درباره سامانه مدیریت دوره‌های مرکز نوآوری:</h1>
-			<div class="main-description">
+			<div className="about-us__moarefi">
 				<p>
 					در سال 1385 تاسیس شده است. در حال حاضر 1999 دانشجو و 38
 					استاد در این مرکز مشغول فعالیت می باشند. بر اساس تحلیلهای
@@ -106,12 +17,12 @@
 					مقاله معتبر بین المللی نیز از این مرکز استخراج شده است.
 				</p>
 			</div>
-			<div class="description">
-				<div class="name">
-					<i class="fa-light fa-house-heart"></i>
+			<div className="about-us__description">
+				<div className="about-us__description__title">
+					<i className="fa-light fa-house-heart"></i>
 					<span>دامنه فعالیت‌ها:</span>
 				</div>
-				<p class="text">
+				<p className="about-us__description__text">
 					لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
 					با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه
 					و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
@@ -124,13 +35,14 @@
 					راهکارها
 				</p>
 			</div>
-			<hr class="separator" />
-			<div class="description">
-				<div class="name">
-					<i class="fa-light fa-bullseye-arrow"></i>
+			<hr className="about-us__separator" />
+
+			<div className="about-us__description">
+				<div className="about-us__description__title">
+					<i className="fa-light fa-bullseye-arrow"></i>
 					<span>اهداف:</span>
 				</div>
-				<p class="text">
+				<p className="about-us__description__text">
 					لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
 					با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه
 					و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
@@ -143,13 +55,13 @@
 					راهکارها
 				</p>
 			</div>
-			<hr class="separator" />
-			<div class="description">
-				<div class="name">
-					<i class="fa-light fa-sun-bright"></i>
-					<span>آشنایی با دوره ها:</span>
+			<hr className="about-us__separator" />
+			<div className="about-us__description">
+				<div className="about-us__description__title">
+					<i className="fa-light fa-sun-bright"></i>
+					<span>آشنایی با دوره‌ها:</span>
 				</div>
-				<p class="text">
+				<p className="about-us__description__text">
 					لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
 					با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه
 					و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
@@ -193,84 +105,6 @@
 					گیرد.
 				</p>
 			</div>
-		</main>
-		<!-- end body -->
-		<!-- start footer -->
-		<header class="header">
-			<i
-				class="fa-solid fa-bars"
-				id="humicon"
-				onclick="mobileMenu(click)"
-			></i>
-			<div class="mobile_menu_div d-none" id="mobile">
-				<div
-					class="mobile_menu_backdrop_div"
-					onclick="mobileMenu(click)"
-				></div>
-				<div class="mobile_menu_content_div">
-					<div class="title">
-						<i
-							class="fa-regular fa-arrow-right"
-							onclick="mobileMenu(click)"
-						></i>
-						<strong>مرکز نوآفرینی و کارآفرینی </strong>
-					</div>
-					<nav aria-label="mobile_menu" class="mobile_menu">
-						<ul>
-							<li>
-								<a href="./index.html">صفحه اصلی</a>
-							</li>
-							<li>
-								<a href="#">اطلاعیه‌ها</a>
-							</li>
-							<li>
-								<a
-									href="https://www.torbath.ac.ir/"
-									target="_blank"
-									>دانشگاه تربت‌حیدریه</a
-								>
-							</li>
-							<li>
-								<a href="./about_us.html">درباره ما</a>
-							</li>
-							<li>
-								<a href="./contact_us.html">تماس باما</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-			<img class="logo" src="./assets/images/logo_white.png" />
-			<h1 class="name">
-				سامانه مدیریت دوره‌های آموزشی
-				<br />
-				مرکز نوآفرینی و کارآفرینی دانشگاه تربت‌حیدریه
-			</h1>
-			<nav aria-label="menu" class="navbar">
-				<ul>
-					<li>
-						<a href="./index.html">صفحه اصلی</a>
-					</li>
-					<li>
-						<a href="#">اطلاعیه‌ها</a>
-					</li>
-					<li>
-						<a href="./course.html">درخواست دوره</a>
-					</li>
-					<li>
-						<a href="./about_us.html">درباره ما</a>
-					</li>
-					<li>
-						<a href="./contact_us.html">تماس باما</a>
-					</li>
-				</ul>
-			</nav>
-			<a class="login" href="./auth.html">
-				<i class="fa-light fa-user"></i>
-				<span>ثبت نام / ورود</span>
-			</a>
-		</header>
-		<!-- end footer -->
-		<script src="./js/header.js"></script>
-	</body>
-</html>
+		</section>
+	);
+}
