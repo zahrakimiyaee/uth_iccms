@@ -1,0 +1,35 @@
+@import "~color-palet";
+
+.not-found {
+	// width: 80vw;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+	background-color: #f9f2f4;
+	gap: 5rem;
+	> .not-found--title {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		> i {
+			font-size: 3rem;
+			color: #e0004d;
+		}
+		> span {
+			font-size: 2rem;
+		}
+	}
+	> .not-found--button {
+		// align-self: flex-end;
+		min-width: 200px;
+		font-size: 1.5rem;
+		justify-self: end;
+		padding: 0.5rem;
+		font-size: 0.9rem;
+		background-color: #8b0861;
+		color: #ffffff;
+		border-radius: 8px;
+	}
+}

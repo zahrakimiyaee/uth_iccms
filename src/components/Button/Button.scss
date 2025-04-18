@@ -1,4 +1,4 @@
-@import "../../assets/sass/color-palet";
+@import "~color-palet";
 
 .button {
 	margin-right: auto;
@@ -29,7 +29,3 @@
 		// border: #8b0861;
 	}
 }
-// .button:focus:not(:focus-visible) {
-// 	outline: none !important;
-// 	border: 5px solid #f7f3f6;
-// }

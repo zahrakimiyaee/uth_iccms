@@ -1,9 +1,9 @@
 import "./ProductCard.scss";
 import CourseCertificate from "../CourseCertificate/CourseCertificate";
-import { useState } from "react";
+// import { useState } from "react";
 
 export default function ProductCart({
-	key,
+	id,
 	img,
 	title,
 	certificate,
@@ -11,6 +11,7 @@ export default function ProductCart({
 	address,
 	price,
 }) {
+	// console.log(id);
 	return (
 		<div className="card p-2 m-2 product">
 			<img
@@ -39,7 +40,7 @@ export default function ProductCart({
 					</span>
 				</section>
 				{/* ------------------address----------------- */}
-				<section className="description__address">
+				{/* <section className="description__address">
 					<div>
 						<h6 className="description__address__title">
 							محل برگزاری :
@@ -48,9 +49,12 @@ export default function ProductCart({
 							{address}
 						</span>
 					</div>
-				</section>
+				</section> */}
 				{/* ------------------buttons------------------ */}
-				<a href="" className="btn my-1 description__more">
+				<a
+					href={`/Product/${id}`}
+					className="btn my-1 description__more"
+				>
 					توضیحات بیشتر
 				</a>
 				<section className="description__price">

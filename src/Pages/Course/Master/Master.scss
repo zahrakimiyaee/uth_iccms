@@ -1,0 +1,128 @@
+@import "~color-palet";
+
+%input__div {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 0.2rem;
+	@media screen and (max-width: 576px) {
+		justify-content: space-around;
+	}
+}
+
+%label {
+	width: 20%;
+	@media screen and (max-width: 576px) {
+		width: 25%;
+	}
+}
+
+%input {
+	display: flex;
+	width: 60%;
+	padding: 10px 10px;
+	border-radius: 8px;
+	font-size: 0.9rem;
+	border: 1px solid #e3dde1;
+	background-color: #f7f0f5;
+}
+
+.master-inputs {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	row-gap: 1rem;
+	@media screen and (max-width: 768px) {
+		display: flex;
+		flex-direction: column;
+	}
+	&__name {
+		@extend %input__div;
+		label {
+			@extend %label;
+		}
+		input {
+			@extend %input;
+		}
+	}
+	&__date {
+		@extend %input__div;
+		label {
+			@extend %label;
+		}
+		&__date-picker {
+			@extend %input;
+			// background-color: aqua;
+		}
+		// input {
+		// }
+	}
+	&__time {
+		@extend %input__div;
+		label {
+			@extend %label;
+		}
+		&__values {
+			@extend %input;
+			justify-content: space-around;
+			select {
+				background-color: #f7f0f5;
+			}
+		}
+	}
+	&__teacher {
+		@extend %input__div;
+		label {
+			@extend %label;
+		}
+		input {
+			@extend %input;
+		}
+	}
+	&__more-descrption {
+		@extend %input__div;
+		margin-right: 1.5rem;
+		flex-direction: column;
+		align-items: flex-start;
+		textarea {
+			@extend %input;
+			width: 95%;
+			min-height: 150px;
+		}
+		@media screen and (max-width: 576px) {
+			margin-right: 0.5rem;
+		}
+	}
+	&__certificate {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 3fr;
+		column-gap: 0.5rem;
+		@media screen and (max-width: 768px) {
+			margin: 0 1rem;
+		}
+		@media screen and (max-width: 576px) {
+			display: flex;
+			flex-direction: column;
+			row-gap: 0.5rem;
+			margin: 0 0.5rem;
+		}
+		&--order {
+			display: flex;
+			gap: 0.2rem;
+			align-items: center;
+			align-self: flex-start;
+			input {
+				accent-color: $primary-color;
+			}
+		}
+		&__certificate {
+			grid-column: span 2;
+			display: flex;
+			flex-direction: column;
+			padding: 0.8rem;
+			border-radius: 8px;
+			border: 1px solid rgba(190, 189, 189, 0.6);
+			box-shadow: 1px 1px 2px rgba(190, 189, 189, 0.6);
+		}
+	}
+}

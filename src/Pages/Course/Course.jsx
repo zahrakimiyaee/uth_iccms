@@ -1,62 +1,39 @@
+import { useState } from "react";
 import "./Course.scss";
+import Master from "./Master/Master";
+import Student from "./Student/Student";
 
 export default function Course() {
+	const [show, setShow] = useState(true);
 	return (
 		<section className="main-container">
 			<div className="selector">
-				<div className="selector__master">
+				<div
+					className={
+						show === true
+							? "selector__master--selected"
+							: "selector__master--deselected"
+					}
+					onClick={() => setShow(true)}
+				>
 					<span>استاد</span>
 				</div>
-				<div className="selector__student">
+				<div
+					className={
+						show === false
+							? "selector__student--selected"
+							: "selector__student--deselected"
+					}
+					onClick={() => setShow(false)}
+				>
 					<span>دانشجو</span>
 				</div>
 			</div>
 			<div className="content">
-				<div className="content__inputs">
-					<div className="content__inputs__name">
-						<label htmlFor="course-name">عنوان دوره :</label>
-						<input
-							type="text"
-							id="course-name"
-							placeholder="دوره برنامه‌نویسی تحت‌وب"
-							required
-						/>
-					</div>
-					<div className="content__inputs__date">
-						<label htmlFor="course-date">تاریخ شروع :</label>
-						<input type="date" id="course-date" required />
-					</div>
-					<div className="content__inputs__time">
-						<label htmlFor="course-time">تاریخ شروع :</label>
-						<div className="content__inputs__time__values">
-							<select name="day" id="">
-								<option value="">شنبه</option>
-								<option value="">یکشنبه</option>
-								<option value="">دوشنبه</option>
-								<option value="">سه‌‌شنبه</option>
-								<option value="">چهارشنبه</option>
-								<option value="">پنجشنبه</option>
-							</select>
-							<select name="hour" id="">
-								<option value="">8-10</option>
-								<option value="">10-12</option>
-								<option value="">12-14</option>
-								<option value="">14-16</option>
-								<option value="">16-18</option>
-								<option value="">18-20</option>
-							</select>
-						</div>
-					</div>
-					<div className="content__inputs__teacher">
-						<label htmlFor="course-teacher">مدرس :</label>
-						<input
-							type="text"
-							id="course-teacher"
-							placeholder="زهرا کیمیایی"
-							required
-						/>
-					</div>
-				</div>
+				{show === true && <Master />}
+				{show === false && <Student />}
+
+				<button className="register">ثبت درخواست</button>
 			</div>
 		</section>
 	);

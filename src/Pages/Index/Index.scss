@@ -9,6 +9,5 @@
 	&__cards {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(12rem, 14rem - 0.5rem));
-		// justify-content: space-around;
 	}
 }
