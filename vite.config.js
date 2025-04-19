@@ -6,10 +6,7 @@ import Path from "path";
 export default defineConfig({
 	resolve: {
 		alias: {
-			"~color-palet": Path.resolve(
-				__dirname,
-				"src/assets/sass/color-palet.scss"
-			),
+			"~palet": Path.resolve(__dirname, "src/assets/sass/palet.scss"),
 		},
 	},
 	plugins: [react()],

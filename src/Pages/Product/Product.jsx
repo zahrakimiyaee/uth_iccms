@@ -1,13 +1,24 @@
 import { useParams, useNavigate } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./Product.scss";
 import products from "../../components/ProductCard/productCardData.js";
 import ErrorHandler from "../../components/ErrorHandler/ErrorHandler.jsx";
 
 export default function Product() {
+	const [select, setSelect] = useState(true);
+	const prerequisiteRef = useRef(null);
+	const introductionRef = useRef(null);
 	const [product, setProduct] = useState(null);
 	const navigate = useNavigate();
 	const { id } = useParams();
+
+	const ToRrerequisite = () => {
+		prerequisiteRef.current?.scrollIntoView({ behavior: "smooth" });
+	};
+	const ToIntroduction = () => {
+		introductionRef.current?.scrollIntoView({ behavior: "smooth" });
+	};
+
 	useEffect(() => {
 		let found = products.find((item) => item.id === id);
 		if (!found) {
@@ -70,11 +81,38 @@ export default function Product() {
 			</div>
 			<div className="product-disc">
 				<div className="product-disc__top-menu">
-					<h3>جزئیات دوره</h3>
+					<h3
+						className={
+							select === true
+								? "product-disc__top-menu__nav--selected"
+								: "product-disc__top-menu__nav--deselected"
+						}
+						onClick={() => {
+							setSelect(true);
+							ToIntroduction();
+						}}
+					>
+						جزئیات دوره
+					</h3>
+					<h3
+						className={
+							select === false
+								? "product-disc__top-menu__nav--selected"
+								: "product-disc__top-menu__nav--deselected"
+						}
+						onClick={() => {
+							setSelect(false);
+							ToRrerequisite();
+						}}
+					>
+						پیش‌نیازها
+					</h3>
 				</div>
-				{/* <hr className="product-disc__seperator" /> */}
 				<div className="product-disc__introduction">
-					<h1 className="product-disc__introduction__title">
+					<h1
+						className="product-disc__introduction__title"
+						ref={introductionRef}
+					>
 						{product.title}
 					</h1>
 					<p className="product-disc__introduction__paragraph">
@@ -95,7 +133,10 @@ export default function Product() {
 					</div>
 				</div>
 				<div className="product-disc__prerequisite">
-					<h3 className="product-disc__prerequisite__title">
+					<h3
+						className="product-disc__prerequisite__title"
+						ref={prerequisiteRef}
+					>
 						پیش‌نیازها:
 					</h3>
 					<p className="product-disc__prerequisite__paragraph">

@@ -1,11 +1,9 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./styles/reset_css.css";
 import "./assets/fonts/fontawesome/css/all.css";
 import "jalaali-react-date-picker/lib/styles/index.css";
 import MainLayout from "./layouts/MainLayout.jsx";
 import NoLayout from "./layouts/NoLayout.jsx";
-// import Header from "./components/Header/Header.jsx";
-// import Footer from "./components/Footer/Footer.jsx";
 import Index from "./Pages/Index/Index.jsx";
 import Login from "./Pages/Login/Login.jsx";
 import AboutUs from "./Pages/AboutUs/AboutUs.jsx";
