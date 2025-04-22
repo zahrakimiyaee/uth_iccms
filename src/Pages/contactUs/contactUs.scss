@@ -30,9 +30,6 @@
 		font-size: 1.5rem;
 		color: $primary-color;
 	}
-	// &__description {
-	// 	// color: ;
-	// }
 	.form {
 		display: flex;
 		gap: 1.5rem;
@@ -108,9 +105,6 @@
 				textarea {
 					@extend %input;
 					min-height: 5rem;
-					// @media screen and (max-width: 992px) {
-					// 	min-height: ;
-					// }
 				}
 			}
 			&__submit {
@@ -139,19 +133,16 @@
 				@extend %discription__div;
 				> span {
 					margin-right: 1rem;
-					// text-indent: 1rem;
 				}
 			}
 			&__post-code {
 				@extend %discription__div;
 				text-align: left;
 				margin-left: 1rem;
-				// margin-right: auto;
 			}
 			&__address {
 				@extend %discription__div;
 				> span {
-					// text-indent: 1rem;
 					margin-right: 1rem;
 				}
 			}

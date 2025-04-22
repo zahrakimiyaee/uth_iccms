@@ -1,23 +1,14 @@
+import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import React, { useEffect, useState, useRef } from "react";
 import "./Product.scss";
 import products from "../../components/ProductCard/productCardData.js";
 import ErrorHandler from "../../components/ErrorHandler/ErrorHandler.jsx";
 
 export default function Product() {
 	const [select, setSelect] = useState(true);
-	const prerequisiteRef = useRef(null);
-	const introductionRef = useRef(null);
 	const [product, setProduct] = useState(null);
 	const navigate = useNavigate();
 	const { id } = useParams();
-
-	const ToRrerequisite = () => {
-		prerequisiteRef.current?.scrollIntoView({ behavior: "smooth" });
-	};
-	const ToIntroduction = () => {
-		introductionRef.current?.scrollIntoView({ behavior: "smooth" });
-	};
 
 	useEffect(() => {
 		let found = products.find((item) => item.id === id);
@@ -29,59 +20,64 @@ export default function Product() {
 	}, [id, navigate]);
 
 	return product ? (
-		<section className="container main">
+		<section className="main-product">
 			<div className="product-page">
 				<img className="product-page__img" src={product.img} alt="" />
-				<div className="product-page__content">
-					<ul className="product-page__content__icons">
-						<li>
-							<a href="#"></a>
-							<i className="far fa-share-nodes"></i>
-						</li>
-						<li>
-							<a href="#"></a>
-							<i className="far fa-heart"></i>
-						</li>
-						<li>
-							<a href="#"></a>
-							<i className="far fa-thumbs-up"></i>
-						</li>
-					</ul>
-					<div className="product-page__content__title">
-						<strong>{product.title}</strong>
-						<span>گروه کامپیوتر</span>
-					</div>
-					<div className="product-page__content__date">
-						<i className="far fa-calendar-day product-page__content__date--icon"></i>
-						<span> تاریخ برگزاری:</span>
-						<strong> چهارشنبه‌ها 12-14 از 15آبان تا 23 دی</strong>
-					</div>
-					<div className="product-page__content__description">
-						<div>
-							<i className="fa fa-user-tie"></i>
-							<span> مدرس:</span>
-							<strong>{product.teacher}</strong>
+				<div className="product-page--order">
+					<div className="product-page--order__content">
+						<ul className="product-page--order__content__icons">
+							<li>
+								<a href="#"></a>
+								<i className="far fa-share-nodes"></i>
+							</li>
+							<li>
+								<a href="#"></a>
+								<i className="far fa-heart"></i>
+							</li>
+							<li>
+								<a href="#"></a>
+								<i className="far fa-thumbs-up"></i>
+							</li>
+						</ul>
+						<div className="product-page--order__content__title">
+							<strong>{product.title}</strong>
+							<span>گروه کامپیوتر</span>
 						</div>
-						<small>24نفر در این دوره شرکت کرده‌اند.</small>
+						<div className="product-page--order__content__date">
+							<i className="far fa-calendar-day product-page__content__date--icon"></i>
+							<span> تاریخ برگزاری:</span>
+							<strong>
+								{" "}
+								چهارشنبه‌ها 12-14 از 15آبان تا 23 دی
+							</strong>
+						</div>
+						<div className="product-page--order__content__description">
+							<div>
+								<i className="fa fa-user-tie"></i>
+								<span> مدرس:</span>
+								<strong>{product.teacher}</strong>
+							</div>
+							<small>24نفر در این دوره شرکت کرده‌اند.</small>
+						</div>
 					</div>
-				</div>
-				<div className="product-page__price">
-					<div className="product-page__price__the-price">
-						<span>قیمت:</span>
-						<span>
-							<strong>{product.price}</strong>
-							<small>تومان</small>
-						</span>
-					</div>
+					<div className="product-page--order__price">
+						<div className="product-page--order__price__the-price">
+							<span>قیمت:</span>
+							<span>
+								<strong>{product.price}</strong>
+								<small>تومان</small>
+							</span>
+						</div>
 
-					<button className="product-page__price__submit">
-						افزودن به سبدخرید
-					</button>
+						<button className="product-page--order__price__submit">
+							افزودن به سبدخرید
+						</button>
+					</div>
 				</div>
 			</div>
 			<div className="product-disc">
 				<div className="product-disc__top-menu">
-					<h3
+					<a
 						className={
 							select === true
 								? "product-disc__top-menu__nav--selected"
@@ -89,12 +85,14 @@ export default function Product() {
 						}
 						onClick={() => {
 							setSelect(true);
-							ToIntroduction();
+							// ToIntroduction();
 						}}
+						href="#interoductionRef"
+						id="interoductionRef"
 					>
 						جزئیات دوره
-					</h3>
-					<h3
+					</a>
+					<a
 						className={
 							select === false
 								? "product-disc__top-menu__nav--selected"
@@ -102,16 +100,18 @@ export default function Product() {
 						}
 						onClick={() => {
 							setSelect(false);
-							ToRrerequisite();
+							// ToRrerequisite();
 						}}
+						href="#prerequisiteRef"
 					>
-						پیش‌نیازها
-					</h3>
+						پیشنیازها
+					</a>
 				</div>
 				<div className="product-disc__introduction">
 					<h1
 						className="product-disc__introduction__title"
-						ref={introductionRef}
+						// ref={introductionRef}
+						// id="interoductionRef"
 					>
 						{product.title}
 					</h1>
@@ -119,7 +119,7 @@ export default function Product() {
 						{product.description}
 					</p>
 				</div>
-				<div className="product-disc__headlines">
+				<div className="product-disc__headlines" id="prerequisiteRef">
 					<strong className="d-block">
 						آنچه در این دوره می‌آموزید:{" "}
 					</strong>
@@ -135,7 +135,7 @@ export default function Product() {
 				<div className="product-disc__prerequisite">
 					<h3
 						className="product-disc__prerequisite__title"
-						ref={prerequisiteRef}
+						// id="prerequisiteRef"
 					>
 						پیش‌نیازها:
 					</h3>
@@ -151,6 +151,19 @@ export default function Product() {
 						پیشرو در زبان فارسی ایجاد کرد.
 					</p>
 				</div>
+			</div>
+			<div className="price--mobile">
+				<div className="product-page--order__price__the-price">
+					<span>قیمت:</span>
+					<span>
+						<strong>{product.price}</strong>
+						<small>تومان</small>
+					</span>
+				</div>
+
+				<button className="product-page--order__price__submit">
+					افزودن به سبدخرید
+				</button>
 			</div>
 		</section>
 	) : (
